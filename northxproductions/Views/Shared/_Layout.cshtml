@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Northx Productions</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body class="my-body">
+    <div class="my-nav-bar">
+        <table class="my-nav-bar-table">
+            <tr>
+                <td class="my-nav-bar-item-large" colspan="4">
+                    <a href='@Url.Action("Index", "Home")'>
+                        <img src="http://i.imgur.com/5RWnAG1.png" width="120" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="my-nav-bar-item-small">
+                    @Html.ActionLink("Videos", "Index", "Videos")
+                </td>
+                <td class="my-nav-bar-item-small">
+                    @Html.ActionLink("Music", "Music", "Home")
+                </td>
+                <td class="my-nav-bar-item-small">
+                    @Html.ActionLink("Blog", "Blog", "Home")
+                </td>
+                <td class="my-nav-bar-item-small">
+                    @Html.ActionLink("Contact", "Contact", "Home")
+                </td>
+                <td>
+                    @if (null != Session["UserIsAdmin"] && Session["UserIsAdmin"].Equals("Admin"))
+                    {
+                        @Html.ActionLink("Admin", "AdminControls", "Admin")
+                    }
+                </td>
+            </tr>
+        </table>
+    </div>
+    @*
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Northx Productions", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>*@
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Northx Productions</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

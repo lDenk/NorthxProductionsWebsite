@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "AdminVideos";
+}
+@using northxproductions.Models
+@model List<NxVideo>
+<br/>
+<h2>Edit Videos</h2>
+<br />
+<h3>Add Video</h3>
+@using (Html.BeginForm("AddVideo", "Admin"))
+{
+    <table class="vid-form-table">
+        <tr class="vid-form-table-row">
+            <td class="vid-form-table-data">
+                <input type="text" name="Url" value="Url" />
+            </td>
+        </tr>
+        <tr>
+            <td class="vid-form-table-data">
+                <input type="text" name="Name" value="Name" />
+            </td>
+        </tr>
+        <tr>
+            <td class="vid-form-table-data">
+                <input type="text" name="ProjectName" value="Project Name" />
+            </td>
+        </tr>
+        <tr>
+            <td class="vid-form-table-data">
+                <input type="submit" value="Submit" />
+            </td>
+        </tr>
+    </table>
+}
+
+<br />
+<h3>Delete Videos</h3>
+<table class="vid-edit-table">
+    @foreach (NxVideo video in Model)
+    {
+        using (Html.BeginForm("DeleteVideo", "Admin"))
+        {
+            <tr class="vid-edit-table-row">
+                <td class="vid-edit-table-data">
+                    @video.Name
+                </td>
+                <td class="vid-edit-table-data">
+                    <input type="hidden" name="Id" value="@video.Id" />
+                    <input type="submit" value="Delete" />
+                </td>
+            </tr>
+        }
+    }
+</table>

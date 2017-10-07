@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Videos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using northxproductions.Models
+@model NxVideoProjectsListModel
+
+<br />
+
+<table class="my-video-table">
+    @foreach(NxVideoProjectModel project in Model.Projects)
+    {
+        <tr class="my-video-table-row">
+            <td class="my-video-table-data-col1">
+                <iframe width="640" height="360"
+                        src="@project.Project[0].Embed"
+                        frameborder="0"
+                        allowfullscreen></iframe>
+            </td>
+            <td class="my-video-table-data-col2">@project.ProjectName</td>
+        </tr>
+    }
+</table>
+
+
+

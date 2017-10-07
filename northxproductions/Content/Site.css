@@ -1,0 +1,92 @@
+﻿body {
+    padding-bottom: 20px;
+    font-family: 'Lucida Console';
+}
+
+.my-body {
+    /*cursor: url(http://i.imgur.com/E5WylPd.png), auto;*/
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Nav bar for website */
+.my-nav-bar {
+    border-bottom: solid;
+    border-color: azure;
+}
+
+/* Table to hold nav bar items */
+.my-nav-bar-table {
+    padding-top: 15px;
+    margin-top: 0px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Nav bar title */
+.my-nav-bar-item-large {
+    text-align: center;
+}
+
+/* Nav bar links */
+.my-nav-bar-item-small {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Homepage Container */
+.my-homepage-container {
+    width: 100%;
+}
+
+/* Table containing video player */
+.my-video-player-table {
+    margin: 0 auto;
+}
+
+/* Video player homepage */
+.my-video-container {
+    margin: 50px;
+    padding: 50px;
+}
+
+.my-iframe-container {
+
+}
+
+/* Video player scroll buttons */
+.my-video-scroll-container {
+    vertical-align: central;
+    background-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Scroll buttons */
+.my-scroll-btn {
+    
+}
+
+.my-scroll-btn:hover {
+
+}
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
