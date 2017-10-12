@@ -196,6 +196,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\VideosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -207,6 +208,7 @@
     <Compile Include="Models\NxVideo.cs" />
     <Compile Include="Models\NxVideoProjectModel.cs" />
     <Compile Include="Models\NxVideoProjectsListModel.cs" />
+    <Compile Include="Models\StoreViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -271,6 +273,7 @@
     <Content Include="Views\Admin\Login.cshtml" />
     <Content Include="Views\Admin\AdminControls.cshtml" />
     <Content Include="Views\Admin\AdminVideos.cshtml" />
+    <Content Include="Views\Store\StoreIndex.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

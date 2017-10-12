@@ -31,6 +31,9 @@
                 <td class="my-nav-bar-item-small">
                     @Html.ActionLink("Contact", "Contact", "Home")
                 </td>
+                <td class="my-nav-bar-item-small">
+                    @Html.ActionLink("Store", "StoreIndex", "Store")
+                </td>
                 <td>
                     @if (null != Session["UserIsAdmin"] && Session["UserIsAdmin"].Equals("Admin"))
                     {
