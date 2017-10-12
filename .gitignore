@@ -1,5 +1,6 @@
 .vs/config/applicationhost.config
 *.cache
-*/northxproductions.dll
-*/northxproductions.pdb
+*northxproductions.dll
+*northxproductions.pdb
 .vs/northxproductions/v14/.suo
+*.FileListAbsolute.txt
