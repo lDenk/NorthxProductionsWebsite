@@ -1,4 +1,5 @@
 .vs/config/applicationhost.config
 *.cache
-*.dll
+*/northxproductions.dll
+*/northxproductions.pdb
 .vs/northxproductions/v14/.suo
