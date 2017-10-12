@@ -1,3 +1,4 @@
 .vs/config/applicationhost.config
-northxproductions/obj/Debug/DesignTimeResolveAssemblyRreferencesInput.cache
+*.cache
 *.dll
+.vs/northxproductions/v14/.suo
