@@ -9,18 +9,21 @@
 <br />
 
 <div class="my-video-page-container">
-    <div id="vid-popup-div" class="my-vid-popup-div">
-        <button class="my-vid-popup-btn" onclick="closePopup()">x</button>
-        <iframe id="vid-popup-iframe" class="my-vid-popup-iframe"
-            width="640" height="360"
-            src=""
-            frameborder="0"
-            allowfullscreen></iframe>
-    </div>
 
     <table class="my-video-table">
         <tr>
             <th>Projects</th>
+            <th rowspan="0">
+                <div id="vid-popup-div" class="my-vid-popup-div">
+                    <!--<button class="my-vid-popup-btn" onclick="closePopup()">x</button>-->
+                    <a class="my-vid-popup-x" onclick="closePopup()">x</a>
+                    <iframe id="vid-popup-iframe" class="my-vid-popup-iframe"
+                            width="640" height="360"
+                            src=""
+                            frameborder="0"
+                            allowfullscreen></iframe>
+                </div>
+            </th>
         </tr>
         @foreach (NxVideoProjectModel project in Model.Projects)
         {
@@ -38,7 +41,9 @@
                     </details>
 
                 </td>
-                <td class="my-video-table-data-col2"></td>
+                <td class="my-video-table-data-col2">
+
+                </td>
             </tr>
         }
     </table>
@@ -54,6 +59,7 @@
     }
 
     function closePopup() {
+        document.getElementById('vid-popup-iframe').src = "";
         document.getElementById('vid-popup-div').style.visibility = 'hidden';
     }
 </script>
