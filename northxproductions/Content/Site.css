@@ -1,11 +1,8 @@
 ﻿body {
-    padding-bottom: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     overflow: scroll;
 }
 
-.my-body {
-    /*cursor: url(http://i.imgur.com/E5WylPd.png), auto;*/
 }
 
 /* Set padding to keep content from hitting the edges */
