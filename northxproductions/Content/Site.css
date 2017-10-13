@@ -16,6 +16,9 @@
     border-bottom: solid;
     border-color: azure;
     background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 200px;
 }
 
 /* Table to hold nav bar items */
