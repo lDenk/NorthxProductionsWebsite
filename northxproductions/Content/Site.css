@@ -1,6 +1,6 @@
 ﻿body {
     padding-bottom: 20px;
-    font-family: 'Lucida Console';
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .my-body {
@@ -31,12 +31,13 @@
 /* Nav bar title */
 .my-nav-bar-item-large {
     text-align: center;
+    padding-left: 17%;
 }
 
 /* Nav bar links */
 .my-nav-bar-item-small {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     margin: auto;
     text-align: center;
     font-size: 1.5em;
@@ -62,10 +63,72 @@
 
 }
 
+.my-video-page-container {
+    width: 50%;
+    margin-right: auto;
+    margin-left: 20%;
+    font-size: medium;
+    height: 400px;
+}
+
+.my-video-table {
+    padding: 20px;
+}
+
+.my-video-table-data-col1 {
+    padding-top: 15px;
+}
+
+.my-video-table-videoname {
+    padding-left: 20px;
+}
+.my-video-table-videoname:hover {
+    padding-left: 20px;
+    background-color: azure;
+    cursor: pointer;
+}
+
+.my-vid-popup-div {
+    height: 400px;
+    width: 700px;
+    background: azure;
+    position: absolute;
+}
+
+.my-vid-popup-iframe {
+    position: absolute;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+.my-vid-popup-btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+.my-vid-popup-btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
 /* Video player scroll buttons */
 .my-video-scroll-container {
     vertical-align: central;
-    background-color: black;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -78,6 +141,7 @@
 .my-scroll-btn:hover {
 
 }
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
