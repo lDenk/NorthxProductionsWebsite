@@ -26,6 +26,7 @@ namespace northxproductions.Models
             /*Goes through all videos*/
             foreach(NxVideo vid in videos)
             {
+                added = false;
                 if(Projects.Count == 0)
                 {
                     newProject = new NxVideoProjectModel(vid);
@@ -41,7 +42,7 @@ namespace northxproductions.Models
                             project.AddVideo(vid);
                             added = true;
                         }
-                        }
+                    }
                     /*Project was not in Projects List*/
                     if (!added)
                     {
