@@ -3,6 +3,13 @@
     overflow: scroll;
 }
 
+.background-image {
+    position: fixed;
+    opacity: 0.1;
+    width: 100%;
+    z-index: -1;
+    padding-top: 197px;
+}
 }
 
 .body-content {
@@ -162,13 +169,4 @@ textarea {
 img.center {
     margin: 0 auto;
     display: block;
-}
-
-.backgroundImage {
-    position: fixed;
-    text-align: center;
-    opacity: 0.1;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
 }
