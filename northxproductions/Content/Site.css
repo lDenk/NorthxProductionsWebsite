@@ -10,6 +10,9 @@
     z-index: -1;
     padding-top: 197px;
 }
+
+.content {
+    padding: 0 350px;
 }
 
 .body-content {
