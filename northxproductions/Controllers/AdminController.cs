@@ -39,6 +39,15 @@ namespace northxproductions.Controllers
             return View("Login");
         }
 
+        public ActionResult AdminMusic()
+        {
+            if (Session["UserIsAdmin"].Equals("Admin"))
+            {
+
+            }
+            return View("Login");
+        }
+
         public ActionResult AddVideo(NxVideo video)
         {
             const string pattern = @"(?:https?:\/\/)?(?:www\.)?(?:(?:(?:youtube.com\/watch\?[^?]*v=|youtu.be\/)([\w\-]+))(?:[^\s?]+)?)";
@@ -52,7 +61,7 @@ namespace northxproductions.Controllers
 
             NxVideoPostManager.Create(JsonConvert.SerializeObject(video));
 
-            return View("AdminControls");
+            return View("AdminControls", NxVideoPostManager.Read());
         }
 
         public ActionResult DeleteVideo(NxVideo video)
