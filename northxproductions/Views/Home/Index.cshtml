@@ -11,7 +11,7 @@
             @using (Html.BeginForm("GetPrev", "Home"))
             {
                 <input type="hidden" name="Id" value="@Model.Id" />
-                <input id="prev" type="image" class="my-scroll-btn" src="http://i.imgur.com/vbQhi2k.png" width="30" height="30"/>
+                <input id="prev" type="image" src="~/Content/Images/ArrowLeft.png" width="30" height="30"/>
             }
         </td>
         <td class="my-video-container">
@@ -24,7 +24,7 @@
             @using (Html.BeginForm("GetNext", "Home"))
             {
                 <input type="hidden" name="Id" value="@Model.Id" />
-                <input id="next" type="image" class="my-scroll-btn" src="http://i.imgur.com/efHTc7s.png" width="30" height="30"/>
+                <input id="next" type="image" src="~/Content/Images/ArrowRight.png" width="30" height="30"/>
             }
         </td>
     </tr>
