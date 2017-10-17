@@ -24,7 +24,7 @@ namespace northxproductions.Controllers
 
             if (user.Equals("Admin") && pass.Equals("camelblue12"))
             {
-                Session["UserIsAdmin"] = "Admin";
+                //Session["UserIsAdmin"] = "Admin";
                 return View("Login");
             }
             return View("Login");
