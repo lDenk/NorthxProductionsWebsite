@@ -52,11 +52,6 @@
     font-size: 1.5em;
 }
 
-/* Homepage Container */
-.my-homepage-container {
-    width: 100%;
-}
-
 /* Table containing video player */
 .my-video-player-table {
     margin: 0 auto;
@@ -150,13 +145,6 @@
 }
 
 /* Video player scroll buttons */
-.my-video-scroll-container {
-    vertical-align: central;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-/* Scroll buttons */
 .my-scroll-btn {
     
 }
