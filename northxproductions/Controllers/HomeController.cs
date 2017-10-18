@@ -141,37 +141,5 @@ namespace northxproductions.Controllers
 
             NxVideoPostManager.Create(JsonConvert.SerializeObject(one));           
         }
-
-        private List<NxVideo> TestVideos()
-        {
-            List<NxVideo> ret = new List<NxVideo>();
-
-            NxVideo one = new NxVideo();
-            one.Url   = "https://www.youtube.com/watch?v=D3dn-i4Hzdg";
-            one.Name  = "Parachute";
-            one.Embed = "https://www.youtube.com/embed/D3dn-i4Hzdg";
-            one.ProjectName = "Parachute";
-            one.Id    = 0;
-
-            NxVideo two = new NxVideo();
-            two.Url   = "https://www.youtube.com/watch?v=CFFwYl-ZgRw";
-            two.Name  = "Forrest's Run - Phase II";
-            two.Embed = "https://www.youtube.com/embed/CFFwYl-ZgRw";
-            two.ProjectName = "Forrest's Run";
-            two.Id    = 1;
-
-            NxVideo three = new NxVideo();
-            three.Url   = "https://www.youtube.com/watch?v=6c96EBEFbAk";
-            three.Name  = "Forrest's Run - Phase I";
-            three.Embed = "https://www.youtube.com/embed/6c96EBEFbAk";
-            three.ProjectName = "Forrest's Run";
-            three.Id    = 2;
-
-            ret.Add(one);
-            ret.Add(two);
-            ret.Add(three);
-
-            return ret;
-        }
     }
 }
