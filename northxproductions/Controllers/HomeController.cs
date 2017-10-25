@@ -23,7 +23,7 @@ namespace northxproductions.Controllers
             return View();
         }
 
-        public ActionResult Blog()
+        public ActionResult NewsFeed()
         {
             return View();
         }
