@@ -5,4 +5,25 @@
 }
 
 <h2>Blog</h2>
+<div id="main"></div>
 
+<script>
+    var mainDiv = document.getElementById('main');
+    var script = document.createElement('script');
+    script.src = "https://api.instagram.com/v1/users/5639840073/media/recent?access_token=5639840073.4918e72.80bb2fd96e2b46c1b215eb86c4deba2c&callback=parseInstagram";
+    mainDiv.appendChild(script);
+
+    function parseInstagram(response) {
+        var mainDiv = document.getElementById('main');
+
+        var frame;
+        response.data.forEach(function (instagramMedia) {
+            frame = document.createElement("iframe");
+            frame.setAttribute("src", instagramMedia.link + "embed");
+            frame.setAttribute("width", "320");
+            frame.setAttribute("height", "440");
+            frame.setAttribute("frameborder", "0");
+            mainDiv.appendChild(frame);
+        }, this);
+    }
+</script>
