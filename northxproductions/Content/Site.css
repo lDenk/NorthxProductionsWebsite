@@ -167,3 +167,27 @@ img.center {
     margin: 0 auto;
     display: block;
 }
+
+/* BLOG STYLING */
+
+.instagramPost {
+    margin: 20px 0;
+    background-color: white;
+    width: 800px;
+    position: relative;
+}
+
+.captionContainer {
+    display: inline-block;
+    padding: 10px;
+    width: 400px;
+    vertical-align: top;
+}
+
+.frameContainer {
+    display: inline-block;
+}
+
+.instagramFrame {
+    display: inline-block;
+}

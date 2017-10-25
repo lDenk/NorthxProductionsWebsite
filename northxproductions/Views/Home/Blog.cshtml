@@ -14,16 +14,71 @@
     mainDiv.appendChild(script);
 
     function parseInstagram(response) {
-        var mainDiv = document.getElementById('main');
+        // Summary: Callback for returned instagram data for us to parse through.
+        // response: Object
+        //  See https://www.instagram.com/developer/endpoints/users/ GET /users/user-id/media/recent
+        //  for more information on the structure of the response.
 
-        var frame;
+        var mainDiv = document.getElementById('main');
+        var heightOfPost = 500;
+
+        var frame, frameContainer, container, captionContainer, instagramCaption;
         response.data.forEach(function (instagramMedia) {
-            frame = document.createElement("iframe");
-            frame.setAttribute("src", instagramMedia.link + "embed");
-            frame.setAttribute("width", "320");
-            frame.setAttribute("height", "440");
-            frame.setAttribute("frameborder", "0");
-            mainDiv.appendChild(frame);
+            // Create container for whole post
+            container = this.initializeElement("div",
+                {
+                    "class": "instagramPost",
+                    style: "height: " + heightOfPost.toString() + "px;",
+                }
+            );
+            mainDiv.appendChild(container);
+
+            frameContainer = this.initializeElement("div",
+                {
+                    "class": "frameContainer",
+                }
+            );
+            container.appendChild(frameContainer);
+
+            // Handle post image
+            frame = this.initializeElement("iframe",
+                {
+                    src: instagramMedia.link + "embed",
+                    width: "400",
+                    height: heightOfPost.toString(),
+                    frameborder: "0",
+                    "class": "instagramFrame",
+                    scrolling: "no"
+                }
+            );
+            frameContainer.appendChild(frame);
+
+            // Handle post caption and title
+            captionContainer = this.initializeElement("div",
+                {
+                    "class": "captionContainer",
+                }
+            );
+            container.appendChild(captionContainer);
+
+            instagramCaption = this.initializeElement("div");
+            instagramCaption.innerText = instagramMedia.caption.text;
+            captionContainer.appendChild(instagramCaption);
+
         }, this);
+    }
+
+    function initializeElement(elementTag, attributes) {
+        // elementTag: String, type of element to create
+        // attributes: Object, object with attribute name and value pairs to initialize the element with
+
+        var element = document.createElement(elementTag);
+
+        for (var attribute in attributes)
+        {
+            element.setAttribute(attribute.toString(), attributes[attribute]);
+        }
+
+        return element;
     }
 </script>
