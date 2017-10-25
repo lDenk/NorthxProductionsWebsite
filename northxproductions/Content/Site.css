@@ -172,16 +172,22 @@ img.center {
 
 .instagramPost {
     margin: 20px 0;
-    background-color: white;
-    width: 800px;
     position: relative;
+    text-align: center;
 }
 
 .captionContainer {
     display: inline-block;
-    padding: 10px;
-    width: 400px;
+    padding: 10px 50px;
+    width: 600px;
     vertical-align: top;
+    font-size: 18pt;
+    background-color: rgb(240,190,122);
+    border-radius: 200px;
+    position: relative;
+    top: 80px;
+    left: 20px;
+    overflow: visible;
 }
 
 .frameContainer {
