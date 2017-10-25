@@ -52,7 +52,6 @@
     margin: auto;
     text-align: center;
     font-size: 1.5em;
-    text-wrap: none;
 }
 
 /* Table containing video player */
@@ -172,9 +171,7 @@ img.center {
 
 /* NEWS FEED STYLING */
 
-#newsFeedTitle {
-    position: relative;
-    left: 196px;
+.newsFeedContent {
     padding-top: 10px;
 }
 
@@ -182,19 +179,21 @@ img.center {
     margin: 20px 0;
     position: relative;
     text-align: center;
+    display: flex;
+    flex-flow: row;
 }
 
 .captionContainer {
     display: inline-block;
-    padding: 10px 50px;
-    width: 600px;
-    vertical-align: top;
+}
+
+.instagramCaption {
     font-size: 18pt;
     background-color: rgb(240,190,122);
-    border-radius: 200px;
+    border-radius: 50px;
     position: relative;
-    top: 80px;
-    left: 20px;
+    padding: 10px 30px;
+    margin-left: 5px;
 }
 
 .frameContainer {

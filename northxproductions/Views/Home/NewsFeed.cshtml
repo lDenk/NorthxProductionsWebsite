@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="main">
+<div id="main" class="newsFeedContent">
     <div id="newsFeedTitle">
         <h2>News Feed</h2>
     </div>
@@ -64,7 +64,11 @@
             );
             container.appendChild(captionContainer);
 
-            instagramCaption = this.initializeElement("div");
+            instagramCaption = this.initializeElement("div",
+                {
+                    "class": "instagramCaption"
+                }
+            );
             instagramCaption.innerText = instagramMedia.caption.text;
             captionContainer.appendChild(instagramCaption);
 
