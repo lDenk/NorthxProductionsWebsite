@@ -171,6 +171,12 @@ img.center {
 
 /* NEWS FEED STYLING */
 
+#newsFeedTitle {
+    position: relative;
+    left: 196px;
+    padding-top: 10px;
+}
+
 .instagramPost {
     margin: 20px 0;
     position: relative;
@@ -188,7 +194,6 @@ img.center {
     position: relative;
     top: 80px;
     left: 20px;
-    overflow: visible;
 }
 
 .frameContainer {
