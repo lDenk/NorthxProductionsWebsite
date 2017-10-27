@@ -23,7 +23,7 @@
         //  for more information on the structure of the response.
 
         var mainDiv = document.getElementById('main');
-        var heightOfPost = 500;
+        var heightOfPost = 400;
 
         var frame, frameContainer, container, captionContainer, instagramCaption;
         response.data.forEach(function (instagramMedia) {
@@ -47,7 +47,7 @@
             frame = this.initializeElement("iframe",
                 {
                     src: instagramMedia.link + "embed",
-                    width: "400",
+                    width: "300",
                     height: heightOfPost.toString(),
                     frameborder: "0",
                     "class": "instagramFrame",
@@ -56,7 +56,7 @@
             );
             frameContainer.appendChild(frame);
 
-            // Handle post caption and title
+            // Handle post caption
             captionContainer = this.initializeElement("div",
                 {
                     "class": "captionContainer",
