@@ -8,16 +8,13 @@
     opacity: 0.1;
     width: 100%;
     z-index: -1;
-    padding-top: 197px;
+    padding-top: 149px;
     text-align: center;
 }
 
 .content {
     padding: 0 225px;
-}
-
-.body-content {
-    padding-top: 185px;
+    padding-top: 136px;
 }
 
 /* Nav bar for website */
@@ -27,22 +24,13 @@
     background-color: black;
     position: fixed;
     width: 100%;
-    height: 200px;
+    height: 150px;
     z-index: 1;
 }
 
-/* Table to hold nav bar items */
-.my-nav-bar-table {
-    padding-top: 15px;
-    margin-top: 0px;
-    width: 50%;
-    margin: 0 auto;
-}
-
 /* Nav bar title */
-.my-nav-bar-item-large {
+.navBarLogo {
     text-align: center;
-    padding-left: 17%;
 }
 
 /* Nav bar links */
