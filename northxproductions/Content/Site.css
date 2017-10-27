@@ -13,7 +13,8 @@
 }
 
 .content {
-    padding-top: 136px;
+    top: 136px;
+    position: relative;
 }
 
 /* Nav bar for website */
