@@ -35,9 +35,7 @@
 
 /* Nav bar links */
 .my-nav-bar-item-small {
-    padding-left: 5%;
-    padding-right: 5%;
-    margin: auto;
+    padding: 0 40px;
     text-align: center;
     font-size: 1.5em;
 }
