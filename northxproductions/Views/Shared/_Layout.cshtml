@@ -61,16 +61,26 @@
 
 <script>
     window.addEventListener("resize", this.adjustImageHeight);
-    this.adjustImageHeight();
 
     if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
         var content = document.getElementsByClassName("content")[0];
         content.style = "padding: 0 225px;";
+        this.adjustImageHeight();
+    }
+    else {
+        window.addEventListener("load", this.zoomOut);
     }
 
     function adjustImageHeight() {
+        // Summary: Adjust the background image height to the height of the screen.
         var backgroundImage = document.getElementsByClassName("background-image")[0];
         backgroundImage.style = "height: " + screen.height + "px;";
+    }
+
+    function zoomOut() {
+        // Summary: Automatically zoom out, so everything on the page is viewable on mobile devices.
+        document.getElementsByTagName("body")[0].style = "zoom: 25%;";
+        this.adjustImageHeight();
     }
 </script>
 </body>
