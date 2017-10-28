@@ -105,6 +105,8 @@
     }
 
     function setupMobileMenu() {
+        // Summary: Show mobile burger, setup mobile menu for use, and hide desktop menu.
+
         var mobileBurger = document.getElementById("mobileBurger");
         mobileBurger.addEventListener("click", this.toggleMobileMenu);
         mobileBurger.setAttribute("class", "inlineBlock");
@@ -120,6 +122,7 @@
     }
 
     function toggleMobileMenu() {
+        // Summary: Show/hide mobile menu.  Use visibility attribute, so the logo respects the space of the menu when hidden.
         var mobileMenu = document.getElementById("mobileMenu");
         isMobileMenuVisible ? mobileMenu.setAttribute("class", "noVis") : mobileMenu.removeAttribute("class");
         isMobileMenuVisible = !isMobileMenuVisible;
