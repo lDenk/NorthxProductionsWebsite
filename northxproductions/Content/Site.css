@@ -13,7 +13,7 @@
 }
 
 .content {
-    top: 136px;
+    top: 161px;
     position: relative;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .my-video-table-data-col1 {
-    padding-top: 15px;
+    padding-bottom: 15px;
     width: 250px;
 }
 
@@ -160,10 +160,6 @@ img.center {
 }
 
 /* NEWS FEED STYLING */
-
-.newsFeedContent {
-    padding-top: 10px;
-}
 
 .instagramPost {
     margin: 20px 0;
