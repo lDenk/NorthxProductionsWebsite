@@ -50,7 +50,7 @@
                     </a>
                 </td>
             </tr>
-            <tr>
+            <tr id="desktopMenu">
                 <td nowrap class="my-nav-bar-item-small">
                     @Html.ActionLink("Videos", "Index", "Videos")
                 </td>
@@ -87,7 +87,6 @@
         </footer>
     </div>
 
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
@@ -95,18 +94,35 @@
 <script>
     window.addEventListener("resize", this.adjustImageHeight);
     this.adjustImageHeight();
-
-    var mobileBurger = document.getElementById("mobileBurger");
-    mobileBurger.addEventListener("click", this.displayMobileMenu);
+    var isMobileMenuVisible = false;
 
     if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
         var content = document.getElementsByClassName("content")[0];
         content.style = "padding: 0 225px;";
     }
+    else {
+        this.setupMobileMenu();
+    }
 
-    function displayMobileMenu() {
+    function setupMobileMenu() {
+        var mobileBurger = document.getElementById("mobileBurger");
+        mobileBurger.addEventListener("click", this.toggleMobileMenu);
+        mobileBurger.setAttribute("class", "inlineBlock");
+
         var mobileMenu = document.getElementById("mobileMenu");
-        mobileMenu.removeAttribute("class");
+        mobileMenu.setAttribute("class", "noVis");
+
+        var desktopMenu = document.getElementById("desktopMenu");
+        desktopMenu.setAttribute("class", "noDisp");
+
+        var navBarTable = document.getElementsByClassName("navBarTable")[0];
+        navBarTable.setAttribute("class", "navBarTable inlineBlock");
+    }
+
+    function toggleMobileMenu() {
+        var mobileMenu = document.getElementById("mobileMenu");
+        isMobileMenuVisible ? mobileMenu.setAttribute("class", "noVis") : mobileMenu.removeAttribute("class");
+        isMobileMenuVisible = !isMobileMenuVisible;
     }
 
     function adjustImageHeight() {

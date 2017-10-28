@@ -51,8 +51,16 @@
     background-color: black;
 }
 
+.noVis {
+    visibility: hidden;
+}
+
 .noDisp {
     display: none;
+}
+
+.inlineBlock {
+    display: inline-block;
 }
 
 /* Table containing video player */
