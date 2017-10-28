@@ -16,6 +16,9 @@
                     <a href='@Url.Action("Index", "Home")'>
                         <img src="~/Content/Images/NorthxLogoNavBar.png" width="90" />
                     </a>
+                    <div id="mobileBurger">
+                        <img src="~/Content/Images/NorthxLogoNavBar.png" width="90" />
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -55,12 +58,45 @@
         </footer>
     </div>
 
+    <div id="mobileMenu" class="nodisp">
+        <table border="1">
+            <tr>
+                <td nowrap class="my-nav-bar-item-small">
+                    @Html.ActionLink("Videos", "Index", "Videos")
+                </td>
+            </tr>
+            <tr>
+                <td nowrap class="my-nav-bar-item-small">
+                    @Html.ActionLink("Music", "Music", "Home")
+                </td>
+            </tr>
+            <tr>
+                <td nowrap class="my-nav-bar-item-small">
+                    @Html.ActionLink("News Feed", "NewsFeed", "Home")
+                </td>
+            </tr>
+            <tr>
+                <td nowrap class="my-nav-bar-item-small">
+                    @Html.ActionLink("Contact", "Contact", "Home")
+                </td>
+            </tr>
+            <tr>
+                <td nowrap class="my-nav-bar-item-small">
+                    @Html.ActionLink("Store", "StoreIndex", "Store")
+                </td>
+            </tr>
+        </table>
+    </div>
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 
 <script>
     window.addEventListener("resize", this.adjustImageHeight);
+
+    var mobileBurger = document.getElementById("mobileBurger");
+    mobileBurger.addEventListener("click", this.displayMobileMenu);
 
     if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
         var content = document.getElementsByClassName("content")[0];
@@ -69,6 +105,11 @@
     }
     else {
         window.addEventListener("load", this.zoomOut);
+    }
+
+    function displayMobileMenu() {
+        var mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.removeAttribute("class");
     }
 
     function adjustImageHeight() {
