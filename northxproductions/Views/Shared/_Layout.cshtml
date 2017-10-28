@@ -10,15 +10,44 @@
 </head>
 <body>
     <div class="my-nav-bar">
+        <div id="mobileBurger" class="noDisp">
+            <img src="~/Content/Images/mobileBurger.png" width="90" />
+            <div id="mobileMenu" class="noDisp">
+                <table border="1">
+                    <tr>
+                        <td nowrap class="my-nav-bar-item-small">
+                            @Html.ActionLink("Videos", "Index", "Videos")
+                        </td>
+                    </tr>
+                    <tr>
+                        <td nowrap class="my-nav-bar-item-small">
+                            @Html.ActionLink("Music", "Music", "Home")
+                        </td>
+                    </tr>
+                    <tr>
+                        <td nowrap class="my-nav-bar-item-small">
+                            @Html.ActionLink("News Feed", "NewsFeed", "Home")
+                        </td>
+                    </tr>
+                    <tr>
+                        <td nowrap class="my-nav-bar-item-small">
+                            @Html.ActionLink("Contact", "Contact", "Home")
+                        </td>
+                    </tr>
+                    <tr>
+                        <td nowrap class="my-nav-bar-item-small">
+                            @Html.ActionLink("Store", "StoreIndex", "Store")
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
         <table align="center" class="navBarTable">
             <tr>
                 <td class="navBarLogo" colspan="5">
                     <a href='@Url.Action("Index", "Home")'>
                         <img src="~/Content/Images/NorthxLogoNavBar.png" width="90" />
                     </a>
-                    <div id="mobileBurger">
-                        <img src="~/Content/Images/NorthxLogoNavBar.png" width="90" />
-                    </div>
                 </td>
             </tr>
             <tr>
@@ -58,35 +87,6 @@
         </footer>
     </div>
 
-    <div id="mobileMenu" class="nodisp">
-        <table border="1">
-            <tr>
-                <td nowrap class="my-nav-bar-item-small">
-                    @Html.ActionLink("Videos", "Index", "Videos")
-                </td>
-            </tr>
-            <tr>
-                <td nowrap class="my-nav-bar-item-small">
-                    @Html.ActionLink("Music", "Music", "Home")
-                </td>
-            </tr>
-            <tr>
-                <td nowrap class="my-nav-bar-item-small">
-                    @Html.ActionLink("News Feed", "NewsFeed", "Home")
-                </td>
-            </tr>
-            <tr>
-                <td nowrap class="my-nav-bar-item-small">
-                    @Html.ActionLink("Contact", "Contact", "Home")
-                </td>
-            </tr>
-            <tr>
-                <td nowrap class="my-nav-bar-item-small">
-                    @Html.ActionLink("Store", "StoreIndex", "Store")
-                </td>
-            </tr>
-        </table>
-    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
