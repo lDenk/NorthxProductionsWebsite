@@ -63,6 +63,10 @@
     display: inline-block;
 }
 
+.floatRight {
+    float: right;
+}
+
 /* Table containing video player */
 .my-video-player-table {
     margin: 0 auto;

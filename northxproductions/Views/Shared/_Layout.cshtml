@@ -118,7 +118,8 @@
         desktopMenu.setAttribute("class", "noDisp");
 
         var navBarTable = document.getElementsByClassName("navBarTable")[0];
-        navBarTable.setAttribute("class", "navBarTable inlineBlock");
+        // Float to right, so user doesn't misclick the logo forcing them to go to the home page
+        navBarTable.setAttribute("class", "floatRight inlineBlock");
     }
 
     function toggleMobileMenu() {
