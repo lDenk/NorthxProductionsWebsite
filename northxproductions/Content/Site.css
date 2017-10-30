@@ -82,7 +82,7 @@
 .my-video-page-container {
     width: 50%;
     font-size: medium;
-    height: 400px;
+    min-height: 400px;
 }
 
 .my-video-table-data-col1 {
