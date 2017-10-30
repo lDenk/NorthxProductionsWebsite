@@ -91,8 +91,14 @@
 }
 
 .my-video-table-videoname {
-    padding-left: 20px;
+    margin: 0 20px;
+    border-color: lightgrey;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
+
 .my-video-table-videoname:hover {
     background-color: azure;
     cursor: pointer;
