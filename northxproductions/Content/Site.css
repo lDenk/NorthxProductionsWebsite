@@ -1,15 +1,7 @@
 ﻿body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     overflow: scroll;
-}
-
-.background-image {
-    position: fixed;
-    opacity: 0.1;
-    width: 100%;
-    z-index: -1;
-    padding-top: 128px;
-    text-align: center;
+    background-color: lightgrey;
 }
 
 .content {
