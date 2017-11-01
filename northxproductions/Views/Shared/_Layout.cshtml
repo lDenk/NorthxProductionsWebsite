@@ -55,33 +55,34 @@
         @*#region start desktop navigation*@
         <div class="inlineBlock desktopMenu">
             <table>
-                <tr nowrap class="my-nav-bar-item-small">
                     <td>
+                <tr>
+                    <td nowrap class="my-nav-bar-item-small">
                         @Html.ActionLink("Videos", "Index", "Videos")
                     </td>
                 </tr>
-                <tr nowrap class="my-nav-bar-item-small">
-                    <td>
+                <tr>
+                    <td nowrap class="my-nav-bar-item-small">
                         @Html.ActionLink("Music", "Music", "Home")
                     </td>
                 </tr>
-                <tr nowrap class="my-nav-bar-item-small">
-                    <td>
+                <tr>
+                    <td nowrap class="my-nav-bar-item-small">
                         @Html.ActionLink("News Feed", "NewsFeed", "Home")
                     </td>
                 </tr>
-                <tr nowrap class="my-nav-bar-item-small">
-                    <td>
+                <tr>
+                    <td nowrap class="my-nav-bar-item-small">
                         @Html.ActionLink("Contact", "Contact", "Home")
                     </td>
                 </tr>
-                <tr nowrap class="my-nav-bar-item-small">
-                    <td>
+                <tr>
+                    <td nowrap class="my-nav-bar-item-small">
                         @Html.ActionLink("Store", "StoreIndex", "Store")
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td nowrap class="my-nav-bar-item-small">
                         @if (null != Session["UserIsAdmin"] && Session["UserIsAdmin"].Equals("Admin"))
                         {
                             @Html.ActionLink("Admin", "AdminControls", "Admin")
