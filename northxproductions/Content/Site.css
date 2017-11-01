@@ -4,11 +4,9 @@
 }
 
 /* Nav bar for website */
-.my-nav-bar {
+.titleBar {
     background-color: black;
     width: 100%;
-    z-index: 1;
-    top: 0;
 }
 
 /* Nav bar links */
