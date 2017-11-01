@@ -3,19 +3,10 @@
     overflow: scroll;
 }
 
-.content {
-    top: 140px;
-    position: relative;
-}
-
 /* Nav bar for website */
 .my-nav-bar {
-    border-bottom: solid;
-    border-color: azure;
     background-color: black;
-    position: fixed;
     width: 100%;
-    height: 150px;
     z-index: 1;
     top: 0;
 }
