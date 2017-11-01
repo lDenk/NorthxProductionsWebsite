@@ -186,31 +186,11 @@ img.center {
 
 /* NEWS FEED STYLING */
 
-.instagramPost {
-    margin: 20px 0;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-flow: row;
+.tumblr_post > div > iframe {
+    width: 533px;
+    height: 300px;
 }
 
-.captionContainer {
-    display: inline-block;
-}
-
-.instagramCaption {
-    font-size: 14pt;
-    background-color: rgb(240,190,122);
-    border-radius: 50px;
-    position: relative;
-    padding: 10px 30px;
-    margin-left: 5px;
-}
-
-.frameContainer {
-    display: inline-block;
-}
-
-.instagramFrame {
-    display: inline-block;
+.tumblr_post {
+    margin-bottom: 25px;
 }
