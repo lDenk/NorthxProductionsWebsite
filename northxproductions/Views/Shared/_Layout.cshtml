@@ -10,6 +10,8 @@
 </head>
 <body>
     <div class="my-nav-bar">
+
+        @*#region  start mobile navigation*@
         <div id="mobileBurger" class="noDisp">
             <img src="~/Content/Images/mobileBurger.png" width="90" />
             <div id="mobileMenu" class="noDisp">
@@ -42,38 +44,54 @@
                 </table>
             </div>
         </div>
-        <table align="center" class="navBarTable">
-            <tr>
-                <td class="navBarLogo" colspan="5">
-                    <a href='@Url.Action("Index", "Home")'>
-                        <img src="~/Content/Images/NorthxLogoNavBar.png" width="90" />
-                    </a>
-                </td>
-            </tr>
-            <tr id="desktopMenu">
-                <td nowrap class="my-nav-bar-item-small">
-                    @Html.ActionLink("Videos", "Index", "Videos")
-                </td>
-                <td nowrap class="my-nav-bar-item-small">
-                    @Html.ActionLink("Music", "Music", "Home")
-                </td>
-                <td nowrap class="my-nav-bar-item-small">
-                    @Html.ActionLink("News Feed", "NewsFeed", "Home")
-                </td>
-                <td nowrap class="my-nav-bar-item-small">
-                    @Html.ActionLink("Contact", "Contact", "Home")
-                </td>
-                <td nowrap class="my-nav-bar-item-small">
-                    @Html.ActionLink("Store", "StoreIndex", "Store")
-                </td>
-                <td>
-                    @if (null != Session["UserIsAdmin"] && Session["UserIsAdmin"].Equals("Admin"))
-                    {
-                        @Html.ActionLink("Admin", "AdminControls", "Admin")
-                    }
-                </td>
-            </tr>
-        </table>
+        @*#region end mobile navigation*@
+
+        <div class="center ">
+            <a href='@Url.Action("Index", "Home")'>
+                <img src="~/Content/Images/NorthxLogoNavBar.png" width="90" />
+            </a>
+        </div>
+
+        @*#region start desktop navigation*@
+        <div class="inlineBlock desktopMenu">
+            <table>
+                <tr nowrap class="my-nav-bar-item-small">
+                    <td>
+                        @Html.ActionLink("Videos", "Index", "Videos")
+                    </td>
+                </tr>
+                <tr nowrap class="my-nav-bar-item-small">
+                    <td>
+                        @Html.ActionLink("Music", "Music", "Home")
+                    </td>
+                </tr>
+                <tr nowrap class="my-nav-bar-item-small">
+                    <td>
+                        @Html.ActionLink("News Feed", "NewsFeed", "Home")
+                    </td>
+                </tr>
+                <tr nowrap class="my-nav-bar-item-small">
+                    <td>
+                        @Html.ActionLink("Contact", "Contact", "Home")
+                    </td>
+                </tr>
+                <tr nowrap class="my-nav-bar-item-small">
+                    <td>
+                        @Html.ActionLink("Store", "StoreIndex", "Store")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @if (null != Session["UserIsAdmin"] && Session["UserIsAdmin"].Equals("Admin"))
+                        {
+                            @Html.ActionLink("Admin", "AdminControls", "Admin")
+                        }
+                    </td>
+                </tr>
+            </table>
+        </div>
+        @*#region end desktop navigation*@
+
     </div>
 
     <div class="content">

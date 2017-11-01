@@ -21,17 +21,6 @@
     top: 0;
 }
 
-/* Nav bar title */
-.navBarLogo {
-    text-align: center;
-}
-
-.navBarTable {
-    /*Setting width like this, instead of direction setting the width, for small screen purposes.*/
-    width: 100%;
-    max-width: 820px;
-}
-
 /* Nav bar links */
 .my-nav-bar-item-small {
     text-align: center;
