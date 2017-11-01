@@ -1,7 +1,6 @@
 ﻿body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     overflow: scroll;
-    background-color: lightgrey;
 }
 
 .content {
@@ -25,12 +24,25 @@
 .my-nav-bar-item-small {
     text-align: center;
     font-size: 1.5em;
+    padding-top: 10px;
 }
 
 #mobileMenu {
     position: absolute;
     z-index: 1;
     background-color: black;
+}
+
+#desktopMenu {
+    width: 170px;
+    background-color: lightgrey;
+    margin-right: 20px;
+}
+
+#desktopBody {
+    display: flex;
+    flex-flow: row;
+    height: 100%;
 }
 
 .noVis {
