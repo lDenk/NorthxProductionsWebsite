@@ -9,6 +9,12 @@
     width: 100%;
 }
 
+#navBarLogo {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid white;
+}
+
 /* Nav bar links */
 .my-nav-bar-item-small {
     text-align: center;
@@ -34,8 +40,9 @@
 
 #desktopMenu {
     width: 170px;
-    background-color: lightgrey;
+    background-color: #E8E8E8;
     margin-right: 20px;
+    padding-top: 15px;
 }
 
 #desktopBody {

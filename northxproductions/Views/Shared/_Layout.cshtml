@@ -46,10 +46,8 @@
         </div>
         @*#region end mobile navigation*@
 
-        <div class="center ">
-            <a href='@Url.Action("Index", "Home")'>
-                <img src="~/Content/Images/NorthxLogoNavBar.png" width="90" />
-            </a>
+        <div class="center">
+            NORTHx Productions
         </div>
     </div>
 
@@ -57,6 +55,13 @@
     <div id="desktopBody">
         <div id="desktopMenu" class="inlineBlock">
             <table align="center">
+                <tr>
+                    <td id="navBarLogo" class="my-nav-bar-item-small">
+                        <a href='@Url.Action("Index", "Home")'>
+                            <img src="~/Content/Images/NorthxLogoNavBar.png" width="90" />
+                        </a>
+                    </td>
+                </tr>
                 <tr>
                     <td nowrap class="my-nav-bar-item-small">
                         @Html.ActionLink("Videos", "Index", "Videos")
