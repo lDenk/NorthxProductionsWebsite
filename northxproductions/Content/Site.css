@@ -15,7 +15,17 @@
 .my-nav-bar-item-small {
     text-align: center;
     font-size: 1.5em;
-    padding-top: 10px;
+    border-bottom: 1px solid white;
+    height: 50px;
+}
+
+.my-nav-bar-item-small:hover {
+    cursor: pointer;
+    background-color: lightblue;
+}
+
+.my-nav-bar-item-small > a {
+    text-decoration: none;
 }
 
 #mobileMenu {
