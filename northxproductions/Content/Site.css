@@ -81,11 +81,6 @@
     float: right;
 }
 
-/* Table containing video player */
-.my-video-player-table {
-    margin: 0 auto;
-}
-
 /* Video player homepage */
 .my-video-container {
     margin: 50px;
