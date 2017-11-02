@@ -40,7 +40,7 @@
     text-decoration: none;
 }
 
-#desktopMenu {
+#menu {
     width: 170px;
     background-color: #E8E8E8;
     margin-right: 20px;
@@ -48,7 +48,7 @@
     min-height: 430px;
 }
 
-#desktopMenuTable {
+#menuTable {
     position: fixed;
     left: 28px;
 }

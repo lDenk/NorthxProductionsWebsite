@@ -24,8 +24,8 @@
 
     @*#region start desktop navigation*@
     <div id="desktopBody">
-        <div id="desktopMenu" class="inlineBlock">
-            <table id="desktopMenuTable">
+        <div id="menu" class="inlineBlock">
+            <table id="menuTable">
                 <tr>
                     <td id="navBarLogo" class="my-nav-bar-item-small">
                         <a href='@Url.Action("Index", "Home")'>
@@ -87,7 +87,7 @@
     @RenderSection("scripts", required: false)
 
 <script>
-    var isMobileMenuVisible = false;
+    var isMenuVisible = false;
 
     var content = document.getElementsByClassName("content")[0];
     if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
@@ -108,15 +108,15 @@
         mobileBurger.addEventListener("click", this.toggleMobileMenu);
         mobileBurger.setAttribute("class", "inlineBlock");
 
-        var desktopMenu = document.getElementById("desktopMenu");
-        desktopMenu.setAttribute("class", "noDisp");
+        var menu = document.getElementById("menu");
+        menu.setAttribute("class", "noDisp");
     }
 
     function toggleMobileMenu() {
         // Summary: Show/hide mobile menu.  Use visibility attribute, so the logo respects the space of the menu when hidden.
-        var mobileMenu = document.getElementById("desktopMenu");
-        isMobileMenuVisible ? mobileMenu.setAttribute("class", "noDisp") : mobileMenu.removeAttribute("class");
-        isMobileMenuVisible = !isMobileMenuVisible;
+        var menu = document.getElementById("menu");
+        isMenuVisible ? menu.setAttribute("class", "noDisp") : menu.removeAttribute("class");
+        isMenuVisible = !isMenuVisible;
     }
 
     function adjustImageHeight() {
