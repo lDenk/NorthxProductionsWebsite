@@ -68,6 +68,7 @@
     width: 100%;
 }
 
+/*General classes*/
 .noVis {
     visibility: hidden;
 }
@@ -82,6 +83,10 @@
 
 .floatRight {
     float: right;
+}
+
+.fixed {
+    position: fixed;
 }
 
 /* Video player homepage */
