@@ -53,6 +53,11 @@
     padding-top: 15px;
 }
 
+#desktopMenuTable {
+    position: fixed;
+    left: 28px;
+}
+
 #desktopBody {
     display: flex;
     flex-flow: row;
