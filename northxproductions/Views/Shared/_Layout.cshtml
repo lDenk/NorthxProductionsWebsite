@@ -14,35 +14,6 @@
         @*#region  start mobile navigation*@
         <div id="mobileBurger" class="noDisp">
             <img src="~/Content/Images/mobileBurger.png" width="90" />
-            <div id="mobileMenu" class="noDisp">
-                <table border="1" cellpadding="10">
-                    <tr>
-                        <td nowrap class="my-nav-bar-item-small">
-                            @Html.ActionLink("Videos", "Index", "Videos")
-                        </td>
-                    </tr>
-                    <tr>
-                        <td nowrap class="my-nav-bar-item-small">
-                            @Html.ActionLink("Music", "Music", "Home")
-                        </td>
-                    </tr>
-                    <tr>
-                        <td nowrap class="my-nav-bar-item-small">
-                            @Html.ActionLink("News Feed", "NewsFeed", "Home")
-                        </td>
-                    </tr>
-                    <tr>
-                        <td nowrap class="my-nav-bar-item-small">
-                            @Html.ActionLink("Contact", "Contact", "Home")
-                        </td>
-                    </tr>
-                    <tr>
-                        <td nowrap class="my-nav-bar-item-small">
-                            @Html.ActionLink("Store", "StoreIndex", "Store")
-                        </td>
-                    </tr>
-                </table>
-            </div>
         </div>
         @*#region end mobile navigation*@
 
@@ -131,27 +102,20 @@
     }
 
     function setupMobileMenu() {
-        // Summary: Show mobile burger, setup mobile menu for use, and hide desktop menu.
+        // Summary: Show mobile burger and setup menu for mobile use.
 
         var mobileBurger = document.getElementById("mobileBurger");
         mobileBurger.addEventListener("click", this.toggleMobileMenu);
         mobileBurger.setAttribute("class", "inlineBlock");
 
-        var mobileMenu = document.getElementById("mobileMenu");
-        mobileMenu.setAttribute("class", "noVis");
-
         var desktopMenu = document.getElementById("desktopMenu");
         desktopMenu.setAttribute("class", "noDisp");
-
-        var navBarTable = document.getElementsByClassName("navBarTable")[0];
-        // Float to right, so user doesn't misclick the logo forcing them to go to the home page
-        navBarTable.setAttribute("class", "floatRight inlineBlock");
     }
 
     function toggleMobileMenu() {
         // Summary: Show/hide mobile menu.  Use visibility attribute, so the logo respects the space of the menu when hidden.
-        var mobileMenu = document.getElementById("mobileMenu");
-        isMobileMenuVisible ? mobileMenu.setAttribute("class", "noVis") : mobileMenu.removeAttribute("class");
+        var mobileMenu = document.getElementById("desktopMenu");
+        isMobileMenuVisible ? mobileMenu.setAttribute("class", "noDisp") : mobileMenu.removeAttribute("class");
         isMobileMenuVisible = !isMobileMenuVisible;
     }
 

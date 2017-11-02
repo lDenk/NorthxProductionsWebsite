@@ -40,12 +40,6 @@
     text-decoration: none;
 }
 
-#mobileMenu {
-    position: absolute;
-    z-index: 1;
-    background-color: black;
-}
-
 #desktopMenu {
     width: 170px;
     background-color: #E8E8E8;
