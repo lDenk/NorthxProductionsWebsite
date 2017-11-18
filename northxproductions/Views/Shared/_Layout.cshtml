@@ -93,6 +93,11 @@
         this.setupMobileMenu();
     }
 
+    var navBarItems = document.getElementsByClassName("my-nav-bar-item-small");
+    for (var i = 0; i < navBarItems.length; i++) {
+        navBarItems[i].addEventListener("click", this.navigate);
+    }
+
     function setupMobileMenu() {
         // Summary: Show mobile burger and setup menu for mobile use.
 
@@ -112,6 +117,11 @@
         var menu = document.getElementById("menu");
         isMenuVisible ? menu.setAttribute("class", "noDisp"): menu.setAttribute("class", "fixed");
         isMenuVisible = !isMenuVisible;
+    }
+
+    function navigate(event) {
+        // Summary: Navigate to the appropriate page via the child anchor tag when table cell is clicked.
+        event.target.children[0].click();
     }
 </script>
 </body>
