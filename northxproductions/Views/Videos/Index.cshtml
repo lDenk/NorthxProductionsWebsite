@@ -25,7 +25,7 @@
         </tr>
         @foreach (NxVideoProjectModel project in Model.Projects)
         {
-            <tr class="my-video-table-row">
+            <tr>
                 <td class="my-video-table-data-col1">
                     <details>
                         <summary>@project.ProjectName</summary>
@@ -36,7 +36,6 @@
                             </div>
                         }
                     </details>
-
                 </td>
             </tr>
         }
