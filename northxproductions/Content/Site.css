@@ -118,6 +118,13 @@
     cursor: pointer;
 }
 
+.videoNames {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
 .my-video-table-videoname {
     margin: 5px 15px;
     border-radius: 5px;
