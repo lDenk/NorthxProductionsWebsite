@@ -127,6 +127,7 @@
     border-top: none;
     border-left: none;
     border-right: none;
+    cursor: pointer;
     padding-top: 15px;
     width: 125px;
     text-align: initial;
@@ -134,7 +135,6 @@
 
 .my-video-table-videoname:hover {
     background-color: azure;
-    cursor: pointer;
 }
 
 .my-vid-popup-div {
