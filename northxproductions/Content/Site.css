@@ -121,16 +121,11 @@
 }
 
 .my-video-table-videoname {
-    margin: 0 15px 0 27px;
-    border-color: lightgrey;
-    border-style: solid;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    margin: 5px 15px;
+    border-radius: 5px;
+    padding: 3px;
     cursor: pointer;
-    margin-top: 15px;
     width: 125px;
-    text-align: initial;
 }
 
 .my-video-table-videoname[data-selected="true"] {
@@ -202,6 +197,12 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.separator {
+    background-color: black;
+    width: 1px;
+    margin: 5px 0;
 }
 
 .center {

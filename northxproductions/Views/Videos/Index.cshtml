@@ -21,18 +21,16 @@
         <div>
             @foreach (NxVideoProjectModel project in Model.Projects)
             {
-                <table class="noDisp" id="@project.ProjectName.Replace(" ", String.Empty)">
+                <div class="noDisp" id="@project.ProjectName.Replace(" ", String.Empty)">
+                    <span class="separator"></span>
                     @foreach (NxVideo video in project.Project)
-                {
-                        <tr>
-                            <td>
-                                <div class="my-video-table-videoname" id="@video.Embed">
-                                    @video.Name
-                                </div>
-                            </td>
-                        </tr>
+                    {
+                        <span class="my-video-table-videoname center" id="@video.Embed">
+                            @video.Name
+                        </span>
+                        <span class="separator"></span>
                     }
-                </table>
+                </div>
             }
         </div>
         <div id="vid-popup-div">
