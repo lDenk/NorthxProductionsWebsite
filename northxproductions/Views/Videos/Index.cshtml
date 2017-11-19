@@ -52,7 +52,6 @@
 <script>
     document.getElementById('vid-popup-div').style.visibility = 'hidden';
 
-
     var videoProjectNames = document.getElementsByClassName("videoProjectName");
     for (var i = 0; i < videoProjectNames.length; i++) {
         videoProjectNames[i].addEventListener("click", functionDelegate(selectProject));
@@ -62,9 +61,40 @@
     this.elSelectedProjectTable = document.getElementById("Parachute");
     this.elSelectedProjectName = videoProjectNames[0];
     this.switchProjects(this.elSelectedProjectTable.id, this.elSelectedProjectName);
-    function videoClick(obj) {
-        var s = obj.id;
-        document.getElementById('vid-popup-iframe').src = s;
+
+    var videoNames = document.getElementsByClassName("my-video-table-videoname");
+    for (var i = 0; i < videoNames.length; i++) {
+        videoNames[i].addEventListener("click", functionDelegate(selectVideo));
+    }
+
+    this.elSelectedVideoName = videoNames[0];
+    this.switchVideos(this.elSelectedVideoName);
+    this.showPopup(this.elSelectedVideoName.id);
+
+    function selectVideo(event) {
+        // Summary: Select video to watch.
+        if (event.target === this.elSelectedVideoName) {
+            return;
+        }
+
+        this.showPopup(event.target.id);
+        this.switchVideos(event.target);
+    }
+
+    function switchVideos(elTarget)
+    {
+        // Summary: Switch/set selected video
+        // elTarget: The target element (video name) that we're switching to/setting
+        this.elSelectedVideoName.setAttribute("data-selected", "false");
+        this.elSelectedVideoName = elTarget;
+        this.elSelectedVideoName.setAttribute("data-selected", "true");
+    }
+
+    function showPopup(source) {
+        // Summary: Show video popup.
+        // source: String representing the source of the video
+
+        document.getElementById('vid-popup-iframe').src = source;
         document.getElementById('vid-popup-div').style.visibility = 'visible';
     }
 
