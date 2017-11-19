@@ -39,7 +39,7 @@
             }
         </div>
         <div id="vid-popup-div" class="my-vid-popup-div inlineBlock">
-            <a class="my-vid-popup-x" onclick="closePopup()">x</a>
+            <a class="my-vid-popup-x" onclick="hidePopup()">x</a>
             <iframe id="vid-popup-iframe" class="my-vid-popup-iframe"
                     width="640" height="360"
                     src=""
@@ -68,7 +68,7 @@
         document.getElementById('vid-popup-div').style.visibility = 'visible';
     }
 
-    function closePopup() {
+    function hidePopup() {
         document.getElementById('vid-popup-iframe').src = "";
         document.getElementById('vid-popup-div').style.visibility = 'hidden';
     }
