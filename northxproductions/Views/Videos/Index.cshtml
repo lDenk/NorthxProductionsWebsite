@@ -9,37 +9,46 @@
 <br />
 
 <div class="my-video-page-container">
-    <table>
+    <table border="1">
         <tr>
             <th class="my-video-table-data-col1">Projects</th>
-            <th>
-                <div id="vid-popup-div" class="my-vid-popup-div">
-                    <a class="my-vid-popup-x" onclick="closePopup()">x</a>
-                    <iframe id="vid-popup-iframe" class="my-vid-popup-iframe"
-                            width="640" height="360"
-                            src=""
-                            frameborder="0"
-                            allowfullscreen></iframe>
-                </div>
-            </th>
         </tr>
+        <tr>
+            @foreach (NxVideoProjectModel project in Model.Projects)
+            {
+                <td class="videoProjectNames">
+                    @project.ProjectName
+                </td>
+            }
+        </tr>
+    </table>
+    <div class="inlineBlock">
         @foreach (NxVideoProjectModel project in Model.Projects)
         {
-            <tr>
-                <td class="my-video-table-data-col1">
-                    <details>
-                        <summary>@project.ProjectName</summary>
-                        @foreach (NxVideo video in project.Project)
-                        {
-                            <div onclick="videoClick(this)" class="my-video-table-videoname" id="@video.Embed">
-                                @video.Name
+            <table class="noDisp" id="@project.ProjectName.Replace(" ", String.Empty)">
+                @foreach (NxVideo video in project.Project)
+                {
+                    <tr>
+                        <td>
+                            <div class="videoTableVideoNames">
+                                <div onclick="videoClick(this)" class="my-video-table-videoname" id="@video.Embed">
+                                    @video.Name
+                                </div>
                             </div>
-                        }
-                    </details>
-                </td>
-            </tr>
+                        </td>
+                    </tr>
+                }
+            </table>
         }
-    </table>
+    </div>
+    <div id="vid-popup-div" class="my-vid-popup-div inlineBlock">
+        <a class="my-vid-popup-x" onclick="closePopup()">x</a>
+        <iframe id="vid-popup-iframe" class="my-vid-popup-iframe"
+                width="640" height="360"
+                src=""
+                frameborder="0"
+                allowfullscreen></iframe>
+    </div>
 </div>
 
 <script>
