@@ -56,7 +56,8 @@
 
     // Show the table for the Parachute project
     this.elSelectedProjectTable = document.getElementById("Parachute");
-    elSelectedProjectTable.removeAttribute("class");
+    this.elSelectedProjectName = document.getElementsByClassName("videoProjectName")[0];
+    this.switchProjects(this.elSelectedProjectTable.id, this.elSelectedProjectName);
 
     var videoProjectNames = document.getElementsByClassName("videoProjectName");
     for (var i = 0; i < videoProjectNames.length; i++) {
@@ -81,8 +82,20 @@
             return;
         }
 
+        this.switchProjects(elementId, event.target);
+    }
+
+    function switchProjects(projectId, elTarget) {
+        // Summary: Switch/set selected projects.
+        // projectId: The id of the project table to display
+        // elTarget: The target element (project name) that we're switching to/setting
+
+        this.elSelectedProjectName.setAttribute("data-selected", "false");
+        this.elSelectedProjectName = elTarget;
+        this.elSelectedProjectName.setAttribute("data-selected", "true");
+
         this.elSelectedProjectTable.setAttribute("class", "noDisp");
-        this.elSelectedProjectTable = document.getElementById(elementId);
+        this.elSelectedProjectTable = document.getElementById(projectId);
         this.elSelectedProjectTable.removeAttribute("class");
     }
 
