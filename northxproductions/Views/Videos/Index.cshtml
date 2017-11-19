@@ -54,6 +54,15 @@
 <script>
     document.getElementById('vid-popup-div').style.visibility = 'hidden';
 
+    // Show the table for the Parachute project
+    this.elSelectedProjectTable = document.getElementById("Parachute");
+    elSelectedProjectTable.removeAttribute("class");
+
+    var videoProjectNames = document.getElementsByClassName("videoProjectNames");
+    for (var i = 0; i < videoProjectNames.length; i++) {
+        videoProjectNames[i].addEventListener("click", functionDelegate(selectProject));
+    }
+
     function videoClick(obj) {
         var s = obj.id;
         document.getElementById('vid-popup-iframe').src = s;
@@ -63,5 +72,26 @@
     function closePopup() {
         document.getElementById('vid-popup-iframe').src = "";
         document.getElementById('vid-popup-div').style.visibility = 'hidden';
+    }
+
+    function selectProject(event) {
+        // Summary: Hide previously selected project video names and show currently selected project video names.
+        var elementId = event.target.innerText.split(" ").join("");
+        if (elementId === this.elSelectedProjectTable.id) {
+            return;
+        }
+
+        this.elSelectedProjectTable.setAttribute("class", "noDisp");
+        this.elSelectedProjectTable = document.getElementById(elementId);
+        this.elSelectedProjectTable.removeAttribute("class");
+    }
+
+    var _this = this;
+    function functionDelegate(delegate) {
+        // Summary: Return a function that will call the delegate with the correct context.
+        // delegate: function to call when event is triggered.
+        return function (event) {
+            delegate.call(_this, event);
+        }
     }
 </script>
