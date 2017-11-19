@@ -54,16 +54,16 @@
 <script>
     document.getElementById('vid-popup-div').style.visibility = 'hidden';
 
-    // Show the table for the Parachute project
-    this.elSelectedProjectTable = document.getElementById("Parachute");
-    this.elSelectedProjectName = document.getElementsByClassName("videoProjectName")[0];
-    this.switchProjects(this.elSelectedProjectTable.id, this.elSelectedProjectName);
 
     var videoProjectNames = document.getElementsByClassName("videoProjectName");
     for (var i = 0; i < videoProjectNames.length; i++) {
         videoProjectNames[i].addEventListener("click", functionDelegate(selectProject));
     }
 
+    // Show the table for the Parachute project
+    this.elSelectedProjectTable = document.getElementById("Parachute");
+    this.elSelectedProjectName = videoProjectNames[0];
+    this.switchProjects(this.elSelectedProjectTable.id, this.elSelectedProjectName);
     function videoClick(obj) {
         var s = obj.id;
         document.getElementById('vid-popup-iframe').src = s;
