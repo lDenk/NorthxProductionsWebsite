@@ -127,7 +127,7 @@
 }
 
 .my-video-table-videoname[data-selected="true"] {
-    background-color: rgb(240,190,122);
+    background-color: rgb(120,255,150);
 }
 
 .my-video-table-videoname:hover {
