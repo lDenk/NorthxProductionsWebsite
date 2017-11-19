@@ -101,6 +101,25 @@
     min-height: 400px;
 }
 
+#videoProjectNames {
+    background-color: #E8E8E8;
+    padding: 7px 0 1px 0;
+}
+
+#videoProjectNames > [data-selected="true"] {
+    background-color: white;
+    padding-top: 5px;
+}
+
+.videoProjectName {
+    border: 1px solid black;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 3px;
+    cursor: pointer;
+}
+
 .videoTableVideoNames {
     padding-bottom: 15px;
     width: 250px;
