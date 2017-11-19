@@ -9,19 +9,17 @@
 <br />
 
 <div class="my-video-page-container">
-    <table border="1">
-        <tr>
-            <th class="my-video-table-data-col1">Projects</th>
-        </tr>
-        <tr>
+    <div class="my-video-table-data-col1">
+        Projects
+    </div>
+        @foreach (NxVideoProjectModel project in Model.Projects)
+            {
+            <span class="videoProjectName">
+                @project.ProjectName
+            </span>
+        }
             @foreach (NxVideoProjectModel project in Model.Projects)
             {
-                <td class="videoProjectNames">
-                    @project.ProjectName
-                </td>
-            }
-        </tr>
-    </table>
     <div class="inlineBlock">
         @foreach (NxVideoProjectModel project in Model.Projects)
         {
@@ -58,7 +56,7 @@
     this.elSelectedProjectTable = document.getElementById("Parachute");
     elSelectedProjectTable.removeAttribute("class");
 
-    var videoProjectNames = document.getElementsByClassName("videoProjectNames");
+    var videoProjectNames = document.getElementsByClassName("videoProjectName");
     for (var i = 0; i < videoProjectNames.length; i++) {
         videoProjectNames[i].addEventListener("click", functionDelegate(selectProject));
     }
