@@ -141,11 +141,10 @@
     background-color: azure;
 }
 
-.my-vid-popup-div {
+#vid-popup-div {
     height: 400px;
     width: 690px;
     background: azure;
-    position: absolute;
     margin-left: 20px;
 }
 
