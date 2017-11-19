@@ -120,12 +120,6 @@
     cursor: pointer;
 }
 
-.videoTableVideoNames {
-    padding-bottom: 15px;
-    width: 250px;
-    text-align: initial;
-}
-
 .my-video-table-videoname {
     margin: 0 15px 0 27px;
     border-color: lightgrey;
@@ -133,6 +127,9 @@
     border-top: none;
     border-left: none;
     border-right: none;
+    padding-top: 15px;
+    width: 125px;
+    text-align: initial;
 }
 
 .my-video-table-videoname:hover {
