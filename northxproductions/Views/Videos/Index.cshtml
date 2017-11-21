@@ -5,7 +5,7 @@
 }
 @using northxproductions.Models
 @model NxVideoProjectsListModel
-<div class="my-video-page-container left">
+<div class="my-video-page-container">
     <h2>
         Projects
     </h2>
@@ -17,7 +17,7 @@
             </span>
         }
     </div>
-    <div class="left">
+    <div>
         <div>
             @foreach (NxVideoProjectModel project in Model.Projects)
             {
@@ -26,7 +26,7 @@
                     @foreach (NxVideo video in project.Project)
                     {
                         <span class="separator"></span>
-                        <span class="my-video-table-videoname center" id="@video.Embed">
+                        <span class="my-video-table-videoname" id="@video.Embed">
                             @video.Name
                         </span>
                         <span class="separator"></span>
@@ -34,14 +34,14 @@
                     <span class="separator"></span>
                 </div>
             }
-        </div>
-        <div id="vid-popup-div">
-            <a class="my-vid-popup-x" onclick="hidePopup()">x</a>
-            <iframe id="vid-popup-iframe" class="my-vid-popup-iframe"
-                    width="640" height="360"
-                    src=""
-                    frameborder="0"
-                    allowfullscreen></iframe>
+            <div id="vid-popup-div">
+                <a class="my-vid-popup-x" onclick="hidePopup()">x</a>
+                <iframe id="vid-popup-iframe" class="my-vid-popup-iframe"
+                        width="640" height="360"
+                        src=""
+                        frameborder="0"
+                        allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </div>

@@ -103,6 +103,7 @@
     flex-flow: row;
     flex-wrap: wrap;
     margin: 10px 0;
+    justify-content: center;
 }
 
 .my-video-table-videoname {
@@ -122,16 +123,12 @@
 }
 
 #vid-popup-div {
-    height: 400px;
-    width: 690px;
     background: azure;
-    margin-left: 20px;
+    padding: 20px 0;
 }
 
 .my-vid-popup-iframe {
-    position: absolute;
-    padding-top: 30px;
-    padding-left: 10px;
+    position: relative;
 }
 
 .my-vid-popup-btn {
@@ -162,6 +159,9 @@
 .my-vid-popup-x {
     padding-left: 10px;
     cursor: pointer;
+    position: relative;
+    top: -360px;
+    left: -5px;
 }
 
 .my-vid-popup-x:hover {
