@@ -34,21 +34,16 @@
                     <span class="separator"></span>
                 </div>
             }
-            <div id="vid-popup-div">
-                <a class="my-vid-popup-x" onclick="hidePopup()">x</a>
-                <iframe id="vid-popup-iframe" class="my-vid-popup-iframe"
-                        width="640" height="360"
-                        src=""
-                        frameborder="0"
-                        allowfullscreen></iframe>
-            </div>
+            <iframe id="vid-popup-iframe" class="my-vid-popup-iframe"
+                    width="640" height="360"
+                    src=""
+                    frameborder="0"
+                    allowfullscreen></iframe>
         </div>
     </div>
 </div>
 
 <script>
-    document.getElementById('vid-popup-div').style.visibility = 'hidden';
-
     var videoProjectNames = document.getElementsByClassName("videoProjectName");
     for (var i = 0; i < videoProjectNames.length; i++) {
         videoProjectNames[i].addEventListener("click", functionDelegate(selectProject));
@@ -92,12 +87,6 @@
         // source: String representing the source of the video
 
         document.getElementById('vid-popup-iframe').src = source;
-        document.getElementById('vid-popup-div').style.visibility = 'visible';
-    }
-
-    function hidePopup() {
-        document.getElementById('vid-popup-iframe').src = "";
-        document.getElementById('vid-popup-div').style.visibility = 'hidden';
     }
 
     function selectProject(event) {

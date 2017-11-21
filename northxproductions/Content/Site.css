@@ -122,13 +122,9 @@
     background-color: azure;
 }
 
-#vid-popup-div {
-    background: azure;
-    padding: 20px 0;
-}
-
 .my-vid-popup-iframe {
-    position: relative;
+    background: azure;
+    padding: 30px;
 }
 
 .my-vid-popup-btn {
@@ -154,20 +150,6 @@
   background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
-}
-
-.my-vid-popup-x {
-    padding-left: 10px;
-    cursor: pointer;
-    position: relative;
-    top: -360px;
-    left: -5px;
-}
-
-.my-vid-popup-x:hover {
-    cursor: pointer;
-    color: blue;
-    text-decoration: none;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
