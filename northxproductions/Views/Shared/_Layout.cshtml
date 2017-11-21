@@ -17,7 +17,7 @@
         </div>
         @*#region end mobile navigation*@
 
-        <div id="title" class="center">
+        <div id="title" class="inlineBlock center">
             NORTHx Productions
         </div>
     </div>
@@ -103,10 +103,7 @@
 
         var mobileBurger = document.getElementById("mobileBurger");
         mobileBurger.addEventListener("click", this.toggleMobileMenu);
-        mobileBurger.setAttribute("class", "inlineBlock");
-
-        var title = document.getElementById("title");
-        title.setAttribute("class", "inlineBlock");
+        mobileBurger.removeAttribute("class");
 
         var menu = document.getElementById("menu");
         menu.setAttribute("class", "noDisp");

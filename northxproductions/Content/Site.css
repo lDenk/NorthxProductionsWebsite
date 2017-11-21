@@ -8,13 +8,18 @@
     background-color: black;
     width: 100%;
     height: 60px;
+    display: flex;
+    flex-flow: row;
+}
+
+#mobileBurger {
+    margin-top: 10px;
 }
 
 #title {
     font-size: 28pt;
     color: white;
-    position: relative;
-    top: 4px;
+    width: 100%;
 }
 
 #navBarLogo {
