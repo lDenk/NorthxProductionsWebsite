@@ -85,6 +85,10 @@
     width: 100%;
 }
 
+#footer {
+    display: flex;
+}
+
 /* Video player homepage */
 .my-video-container {
     margin: 50px;
