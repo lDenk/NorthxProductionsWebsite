@@ -18,14 +18,19 @@
             NORTHx Productions
         </div>
     </div>
-    <div id="desktopMenu">
-        <div class="desktopMenuMargin"></div>
-        @Html.ActionLink("Videos", "Index", "Videos", null, new { @class = "desktopMenuItem" })
-        @Html.ActionLink("Music", "Music", "Home", null, new { @class = "desktopMenuItem" })
-        @Html.ActionLink("News Feed", "NewsFeed", "Home", null, new { @class = "desktopMenuItem" })
-        @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "desktopMenuItem" })
-        @Html.ActionLink("Store", "StoreIndex", "Store", null, new { @class = "desktopMenuItem" })
-        <div class="desktopMenuMargin"></div>
+    <div>
+        <div id="desktopMenu">
+            <div class="desktopMenuMargin"></div>
+            @Html.ActionLink("Videos", "Index", "Videos", null, new { @class = "desktopMenuItem" })
+            @Html.ActionLink("Music", "Music", "Home", null, new { @class = "desktopMenuItem" })
+            @Html.ActionLink("News Feed", "NewsFeed", "Home", null, new { @class = "desktopMenuItem" })
+            @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "desktopMenuItem" })
+            @Html.ActionLink("Store", "StoreIndex", "Store", null, new { @class = "desktopMenuItem" })
+            <div class="desktopMenuMargin"></div>
+        </div>
+        <div id="desktopLogo">
+            <img src="~/Content/Images/NorthxLogoWhiteBackground.png" width="90" />
+        </div>
     </div>
 
     @*#region start desktop navigation*@

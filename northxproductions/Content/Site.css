@@ -55,6 +55,11 @@
 
 .desktopMenuItem {
     width: 14%;
+
+#desktopLogo {
+    text-align: center;
+    margin-top: 20px;
+}
 }
 
 #mobileMenu {
