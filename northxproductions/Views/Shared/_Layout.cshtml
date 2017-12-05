@@ -10,12 +10,9 @@
 </head>
 <body>
     <div class="titleBar">
-
-        @*#region  start mobile navigation*@
         <div id="mobileBurger" class="noDisp">
             <img src="~/Content/Images/mobileBurger.png" width="30" />
         </div>
-        @*#region end mobile navigation*@
 
         <div id="title" class="inlineBlock center">
             NORTHx Productions
@@ -23,18 +20,18 @@
     </div>
     <div id="desktopMenu">
         <div class="desktopMenuMargin"></div>
-        @Html.ActionLink("Videos", "Index", "Videos", new { @class = "desktopMenuItem" })
-        @Html.ActionLink("Music", "Music", "Home", new { @class = "desktopMenuItem" })
-        @Html.ActionLink("News Feed", "NewsFeed", "Home", new { @class = "desktopMenuItem" })
-        @Html.ActionLink("Contact", "Contact", "Home", new { @class = "desktopMenuItem" })
-        @Html.ActionLink("Store", "StoreIndex", "Store", new { @class = "desktopMenuItem" })
+        @Html.ActionLink("Videos", "Index", "Videos", null, new { @class = "desktopMenuItem" })
+        @Html.ActionLink("Music", "Music", "Home", null, new { @class = "desktopMenuItem" })
+        @Html.ActionLink("News Feed", "NewsFeed", "Home", null, new { @class = "desktopMenuItem" })
+        @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "desktopMenuItem" })
+        @Html.ActionLink("Store", "StoreIndex", "Store", null, new { @class = "desktopMenuItem" })
         <div class="desktopMenuMargin"></div>
     </div>
 
     @*#region start desktop navigation*@
     <div id="desktopBody">
-        <div id="menu">
-            <table id="menuTable">
+        <div id="mobileMenu" class="noDisp">
+            <table id="mobileMenuTable">
                 <tr>
                     <td id="navBarLogo" class="my-nav-bar-item-small">
                         <a href='@Url.Action("Index", "Home")'>
@@ -108,19 +105,19 @@
     }
 
     function setupMobileMenu() {
-        // Summary: Show mobile burger and setup menu for mobile use.
+        // Summary: Show mobile burger and hide desktop menu.
 
         var mobileBurger = document.getElementById("mobileBurger");
         mobileBurger.addEventListener("click", this.toggleMobileMenu);
         mobileBurger.removeAttribute("class");
 
-        var menu = document.getElementById("menu");
-        menu.setAttribute("class", "noDisp");
+        var desktopMenu = document.getElementById("desktopMenu");
+        desktopMenu.setAttribute("class", "noDisp");
     }
 
     function toggleMobileMenu() {
         // Summary: Show/hide mobile menu.  Use visibility attribute, so the logo respects the space of the menu when hidden.
-        var menu = document.getElementById("menu");
+        var menu = document.getElementById("mobileMenu");
         isMenuVisible ? menu.setAttribute("class", "noDisp"): menu.setAttribute("class", "fixed");
         isMenuVisible = !isMenuVisible;
     }
