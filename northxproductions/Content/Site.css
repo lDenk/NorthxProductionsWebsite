@@ -44,6 +44,19 @@
     text-decoration: none;
 }
 
+#desktopMenu {
+    display: flex;
+    flex-flow: row;
+}
+
+.desktopMenuMargin {
+    width: 15%;
+}
+
+.desktopMenuItem {
+    width: 14%;
+}
+
 #menu {
     width: 170px;
     background-color: #E8E8E8;

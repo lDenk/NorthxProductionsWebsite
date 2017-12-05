@@ -21,6 +21,15 @@
             NORTHx Productions
         </div>
     </div>
+    <div id="desktopMenu">
+        <div class="desktopMenuMargin"></div>
+        @Html.ActionLink("Videos", "Index", "Videos", new { @class = "desktopMenuItem" })
+        @Html.ActionLink("Music", "Music", "Home", new { @class = "desktopMenuItem" })
+        @Html.ActionLink("News Feed", "NewsFeed", "Home", new { @class = "desktopMenuItem" })
+        @Html.ActionLink("Contact", "Contact", "Home", new { @class = "desktopMenuItem" })
+        @Html.ActionLink("Store", "StoreIndex", "Store", new { @class = "desktopMenuItem" })
+        <div class="desktopMenuMargin"></div>
+    </div>
 
     @*#region start desktop navigation*@
     <div id="desktopBody">
