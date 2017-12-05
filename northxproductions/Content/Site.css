@@ -55,11 +55,27 @@
 
 .desktopMenuItem {
     width: 14%;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    outline: none;
+}
+
+.desktopMenuItem:hover {
+    color: black;
+    text-decoration: none;
+    outline: none;
+}
+
+.desktopMenuItem:focus {
+    color: black;
+    text-decoration: none;
+    outline: none;
+}
 
 #desktopLogo {
     text-align: center;
     margin-top: 20px;
-}
 }
 
 #mobileMenu {
