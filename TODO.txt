@@ -1,0 +1,9 @@
+- make the navigation scheme horizontal
+- link news feed to tumblr instead of embedding
+- copy pdf layout (trattatello font)
+- title bar white background and picture
+- make contact form taller so whole page scrolls
+- automatically get youtube videos
+	https://developers.google.com/youtube/v3/guides/authentication - we're going to need to get the authorization completed
+	We'll then have to query for playlist ids use the mine parameter: https://developers.google.com/youtube/v3/docs/playlists/list
+	Then we'll query for all of the playlist's items for each playlist id: https://developers.google.com/youtube/v3/docs/playlistItems/list
