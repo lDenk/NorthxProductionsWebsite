@@ -41,7 +41,76 @@
                     allowfullscreen></iframe>
         </div>
     </div>
+    <div id="testVideos">
+
+    </div>
 </div>
+
+<script>
+    /**
+    * Load the API's client and auth2 modules.
+    * Call the initClient function after the modules load.
+    */
+    function handleClientLoad() {
+    gapi.load('client', initClient);
+    }
+
+    function initClient() {
+    // Initialize the gapi.client object, which app uses to make API requests.
+    // Get API key and client ID from API Console.
+    // 'scope' field specifies space-delimited list of access scopes
+
+    var testElement = document.getElementById("testVideos");
+    testElement.style = "background-color: red; padding: 10px;";
+
+
+    gapi.client.init({
+        //'clientId': 'northxwebsite',
+        'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'],
+        //'scope': 'profile',
+        'apiKey': 'AIzaSyDpPl0dO0HwQ1ma4829rx5d6BjGXiXZ8HA',
+    }).then(function () {
+        testElement.style = "background-color: black; padding: 10px;";
+
+        var request = gapi.client.request({
+            'method': 'GET',
+            'path': '/youtube/v3/videos',
+            'params': { 'part': 'contentDetails', 'forUsername': 'NORTHx Productions' }
+        });
+        executeRequest(request);
+    }, function (error) { testElement.style = "background-color: black; padding: 10px;"; });
+    }
+
+    function executeRequest(request) {
+        request.execute(function (response) {
+            console.log(response);
+            var testElement = document.getElementById("testVideos");
+            //testElement.innerText = response.player.embedHtml;
+            testElement.style = "background-color: orange; padding: 10px;";
+            var request = gapi.client.request({
+                'method': 'GET',
+                'path': '/youtube/v3/videos',
+                'params': { 'part': 'player', 'playlistId': '' }
+            });
+            executeRequest2(request);
+        });
+    }
+
+    function executeRequest2(request) {
+        request.execute(function (response) {
+            console.log(response);
+            var testElement = document.getElementById("testVideos");
+            //testElement.innerText = response.player.embedHtml;
+            testElement.style = "background-color: blue; padding: 10px;";
+        });
+    }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script async defer src="https://apis.google.com/js/api.js"
+        onload="this.onload=function(){};handleClientLoad()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
 
 <script>
     var videoProjectNames = document.getElementsByClassName("videoProjectName");
