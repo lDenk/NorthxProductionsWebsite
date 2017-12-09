@@ -7,3 +7,4 @@
 	https://developers.google.com/youtube/v3/guides/authentication - we're going to need to get the authorization completed
 	We'll then have to query for playlist ids use the mine parameter: https://developers.google.com/youtube/v3/docs/playlists/list
 	Then we'll query for all of the playlist's items for each playlist id: https://developers.google.com/youtube/v3/docs/playlistItems/list
+	Input in url for testing: https://www.googleapis.com/youtube/v3/playlists?part=contentDetails&chart=mostPopular&key=AIzaSyDpPl0dO0HwQ1ma4829rx5d6BjGXiXZ8HA
