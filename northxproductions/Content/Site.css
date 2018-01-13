@@ -265,7 +265,7 @@ img.center {
 }
 
 .noDisp {
-    display: none;
+    display: none !important;
 }
 
 .inlineBlock {
