@@ -3,6 +3,8 @@
     ViewBag.Title = "Store";
     Layout = "~/Views/Shared/_Layout.cshtml";
     string[] imagePaths;
+    string basePath;
+    string relativeImagePath;
     string mainImageDimension = "300";
     string smallImageDimension = "100";
 }
@@ -21,14 +23,18 @@
 <div id="storeItems">
     <div class="storeItem">
         @{
-            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/GreenShirt1"));
-            <img src="@imagePaths[0]" width=@mainImageDimension height=@mainImageDimension />
+            basePath = "/Content/Images/GreenShirt1/";
+            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath(".." + basePath));
+            relativeImagePath = basePath + Path.GetFileName(imagePaths[0]);
+            <img src="@relativeImagePath" width=@mainImageDimension height=@mainImageDimension />
             <div class="storeSmallImageContainer">
                 @foreach (var imagePath in imagePaths)
                 {
-                    <img src="@imagePath" width=@smallImageDimension height=@smallImageDimension />
+                    relativeImagePath = basePath + Path.GetFileName(imagePath);
+                    <img src="@relativeImagePath" width=@smallImageDimension height=@smallImageDimension />
                 }
             </div>
+
             <span>Green Long Sleeve - Front Text</span>
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_s-xclick">
@@ -41,14 +47,18 @@
 
     <div class="storeItem">
         @{
-            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/GreenShirt2"));
-            <img src="@imagePaths[0]" width=@mainImageDimension height=@mainImageDimension />
+            basePath = "/Content/Images/GreenShirt2/";
+            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath(".." + basePath));
+            relativeImagePath = basePath + Path.GetFileName(imagePaths[0]);
+            <img src="@relativeImagePath" width=@mainImageDimension height=@mainImageDimension />
             <div class="storeSmallImageContainer">
                 @foreach (var imagePath in imagePaths)
                 {
-                    <img src="@imagePath" width=@smallImageDimension height=@smallImageDimension />
+                    relativeImagePath = basePath + Path.GetFileName(imagePath);
+                    <img src="@relativeImagePath" width=@smallImageDimension height=@smallImageDimension />
                 }
             </div>
+
             <span>Green Long Sleeve - Front Logo; Sleeve Text</span>
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_s-xclick">
@@ -61,14 +71,18 @@
 
     <div class="storeItem">
         @{
-            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/BlueShirt1"));
-            <img src="@imagePaths[0]" width=@mainImageDimension height=@mainImageDimension />
+            basePath = "/Content/Images/BlueShirt1/";
+            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath(".." + basePath));
+            relativeImagePath = basePath + Path.GetFileName(imagePaths[0]);
+            <img src="@relativeImagePath" width=@mainImageDimension height=@mainImageDimension />
             <div class="storeSmallImageContainer">
                 @foreach (var imagePath in imagePaths)
                 {
-                    <img src="@imagePath" width=@smallImageDimension height=@smallImageDimension />
+                    relativeImagePath = basePath + Path.GetFileName(imagePath);
+                    <img src="@relativeImagePath" width=@smallImageDimension height=@smallImageDimension />
                 }
             </div>
+
             <span>Blue Long Sleeve - Front Text; Back Logo</span>
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_s-xclick">
@@ -81,14 +95,18 @@
 
     <div class="storeItem">
         @{
-            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/BlueShirt2"));
-            <img src="@imagePaths[0]" width=@mainImageDimension height=@mainImageDimension />
+            basePath = "/Content/Images/BlueShirt2/";
+            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath(".." + basePath));
+            relativeImagePath = basePath + Path.GetFileName(imagePaths[0]);
+            <img src="@relativeImagePath" width=@mainImageDimension height=@mainImageDimension />
             <div class="storeSmallImageContainer">
                 @foreach (var imagePath in imagePaths)
                 {
-                    <img src="@imagePath" width=@smallImageDimension height=@smallImageDimension />
+                    relativeImagePath = basePath + Path.GetFileName(imagePath);
+                    <img src="@relativeImagePath" width=@smallImageDimension height=@smallImageDimension />
                 }
             </div>
+
             <span>Blue Long Sleeve - Front Logo; Back Text</span>
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_s-xclick">
