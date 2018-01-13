@@ -245,12 +245,14 @@ img.center {
 #storeItems {
     display: flex;
     flex-flow: row;
+    flex-wrap: wrap;
     margin: 0 80px;
-    margin-top: 40px;
 }
 
 .storeItem {
     width: 100%;
+    flex: 0 50%;
+    margin-top: 40px;
 }
 
 .storeSmallImageContainer {
