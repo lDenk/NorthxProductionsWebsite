@@ -3,35 +3,39 @@
     ViewBag.Title = "Store";
     Layout = "~/Views/Shared/_Layout.cshtml";
     string[] imagePaths;
+    string mainImageDimension = "300";
+    string smallImageDimension = "100";
 }
 
 <h2>Store</h2>
 <img class="center" src="~/Content/Images/StoreBanner.png" />
 
-<div>
-    @{
-        imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/GreenShirt"));
-        <img src="@imagePaths[0]" width="200" height="200" />
-        <div class="storeSmallImageContainer">
-            @foreach (var imagePath in imagePaths)
+<div id="storeItems">
+    <div class="storeItem">
+        @{
+            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/GreenShirt"));
+            <img src="@imagePaths[0]" width=@mainImageDimension height=@mainImageDimension />
+            <div class="storeSmallImageContainer">
+                @foreach (var imagePath in imagePaths)
             {
-                <img src="@imagePath" width="50" height="50" />
-            }
-        </div>
-    }
-</div>
+                    <img src="@imagePath" width=@smallImageDimension height=@smallImageDimension />
+                }
+            </div>
+        }
+    </div>
 
-<div>
-    @{
-        imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/BlueShirt"));
-        <img src="@imagePaths[0]" width="200" height="200" />
-        <div class="storeSmallImageContainer">
-            @foreach (var imagePath in imagePaths)
+    <div class="storeItem">
+        @{
+            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/BlueShirt"));
+            <img src="@imagePaths[0]" width=@mainImageDimension height=@mainImageDimension />
+            <div class="storeSmallImageContainer">
+                @foreach (var imagePath in imagePaths)
             {
-                <img src="@imagePath" width="50" height="50" />
-            }
-        </div>
-    }
+                    <img src="@imagePath" width=@smallImageDimension height=@smallImageDimension />
+                }
+            </div>
+        }
+    </div>
 </div>
 
 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">

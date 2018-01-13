@@ -240,6 +240,23 @@ img.center {
     list-style-position: inside;
 }
 
+/* STORE STYLING */
+
+#storeItems {
+    display: flex;
+    flex-flow: row;
+    margin: 0 80px;
+    margin-top: 40px;
+}
+
+.storeItem {
+    width: 100%;
+}
+
+.storeSmallImageContainer {
+    margin-top: 10px;
+}
+
 /*General classes*/
 .noVis {
     visibility: hidden;
