@@ -234,12 +234,6 @@ img.center {
     list-style-position: inside;
 }
 
-/* CONTACT STYLING */
-
-#emailLink {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 /*General classes*/
 .noVis {
     visibility: hidden;
@@ -273,4 +267,8 @@ img.center {
 
 .left {
     text-align: left;
+}
+
+.noCustomFont {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
