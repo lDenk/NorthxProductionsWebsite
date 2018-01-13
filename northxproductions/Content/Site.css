@@ -33,6 +33,12 @@ span {
 #title {
     font-size: 28pt;
     width: 100%;
+    display: flex;
+    flex-flow: row;
+}
+
+.titleItem {
+    width: 100%;
 }
 
 #navBarLogo {
