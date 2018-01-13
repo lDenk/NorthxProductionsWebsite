@@ -219,6 +219,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\ArrowLeft.png" />
     <Content Include="Content\Images\ArrowRight.png" />
+    <Content Include="Content\Images\BlueShirt\BlueShirtBackLogo.png" />
+    <Content Include="Content\Images\BlueShirt\BlueShirtBackWriting.png" />
+    <Content Include="Content\Images\BlueShirt\BlueShirtFrontFont.png" />
+    <Content Include="Content\Images\BlueShirt\BlueShirtMidFront.png" />
     <Content Include="Content\Images\GreenShirt\aGreenShirtGenericFront.png" />
     <Content Include="Content\Images\GreenShirt\GreenShirtBackPlain.png" />
     <Content Include="Content\Images\GreenShirt\GreenShirtLogoFront.png" />
