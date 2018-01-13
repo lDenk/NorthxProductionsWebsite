@@ -35,6 +35,51 @@
             <div class="titleItem"> </div>
         </div>
     </div>
+    <div id="mobileMenu" class="noDisp">
+        <table id="mobileMenuTable">
+            <tr>
+                <td id="navBarLogo" class="my-nav-bar-item-small">
+                    <a href='@Url.Action("Index", "Home")'>
+                        <img src="~/Content/Images/NorthxLogoNavBar.png" width="90" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td nowrap class="my-nav-bar-item-small">
+                    @Html.ActionLink("Videos", "Index", "Videos")
+                </td>
+            </tr>
+            <tr>
+                <td nowrap class="my-nav-bar-item-small">
+                    @Html.ActionLink("Music", "Music", "Home")
+                </td>
+            </tr>
+            <tr>
+                <td nowrap class="my-nav-bar-item-small">
+                    <a href="http://northxproductions.tumblr.com" target="_blank">Blog</a>
+                </td>
+            </tr>
+            <tr>
+                <td nowrap class="my-nav-bar-item-small">
+                    @Html.ActionLink("Contact", "Contact", "Home")
+                </td>
+            </tr>
+            <tr>
+                <td nowrap class="my-nav-bar-item-small">
+                    @Html.ActionLink("Store", "StoreIndex", "Store")
+                </td>
+            </tr>
+            <tr>
+                <td nowrap class="my-nav-bar-item-small noDisp">
+                    @if (null != Session["UserIsAdmin"] && Session["UserIsAdmin"].Equals("Admin"))
+                    {
+                        @Html.ActionLink("Admin", "AdminControls", "Admin")
+                    }
+                </td>
+            </tr>
+        </table>
+    </div>
+
     <div>
         <div id="desktopMenu">
             <div class="desktopMenuMargin"></div>
@@ -52,50 +97,6 @@
 
     @*#region start desktop navigation*@
     <div id="desktopBody">
-        <div id="mobileMenu" class="noDisp">
-            <table id="mobileMenuTable">
-                <tr>
-                    <td id="navBarLogo" class="my-nav-bar-item-small">
-                        <a href='@Url.Action("Index", "Home")'>
-                            <img src="~/Content/Images/NorthxLogoNavBar.png" width="90" />
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td nowrap class="my-nav-bar-item-small">
-                        @Html.ActionLink("Videos", "Index", "Videos")
-                    </td>
-                </tr>
-                <tr>
-                    <td nowrap class="my-nav-bar-item-small">
-                        @Html.ActionLink("Music", "Music", "Home")
-                    </td>
-                </tr>
-                <tr>
-                    <td nowrap class="my-nav-bar-item-small">
-                        <a href="http://northxproductions.tumblr.com" target="_blank">Blog</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td nowrap class="my-nav-bar-item-small">
-                        @Html.ActionLink("Contact", "Contact", "Home")
-                    </td>
-                </tr>
-                <tr>
-                    <td nowrap class="my-nav-bar-item-small">
-                        @Html.ActionLink("Store", "StoreIndex", "Store")
-                    </td>
-                </tr>
-                <tr>
-                    <td nowrap class="my-nav-bar-item-small noDisp">
-                        @if (null != Session["UserIsAdmin"] && Session["UserIsAdmin"].Equals("Admin"))
-                        {
-                            @Html.ActionLink("Admin", "AdminControls", "Admin")
-                        }
-                    </td>
-                </tr>
-            </table>
-        </div>
         @*#region end desktop navigation*@
 
         @*Keeping this containing div around because of the flex styling on desktopBody*@
