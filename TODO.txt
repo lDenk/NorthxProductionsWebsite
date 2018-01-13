@@ -1,10 +1,14 @@
-- make the navigation scheme horizontal
-- link news feed to tumblr instead of embedding
-- copy pdf layout (trattatello font)
-- title bar white background and picture
-- make contact form taller so whole page scrolls
+- copy pdf layout
+	- get pictures in home page
+- get social media icons onto the page
+- setup store page with pictures and prices and all that jazz
+	- waiting on buttons from jack and joe
 - automatically get youtube videos
 	https://developers.google.com/youtube/v3/guides/authentication - we're going to need to get the authorization completed
 	We'll then have to query for playlist ids use the mine parameter: https://developers.google.com/youtube/v3/docs/playlists/list
 	Then we'll query for all of the playlist's items for each playlist id: https://developers.google.com/youtube/v3/docs/playlistItems/list
 	Input in url for testing: https://www.googleapis.com/youtube/v3/playlists?part=contentDetails&chart=mostPopular&key=AIzaSyDpPl0dO0HwQ1ma4829rx5d6BjGXiXZ8HA
+
+- make sure everything plays nicely with mobile
+- change font
+	- change font is done, but I'm not sure if it is the font we want
