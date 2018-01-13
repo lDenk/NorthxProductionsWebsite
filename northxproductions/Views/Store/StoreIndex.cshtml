@@ -13,7 +13,7 @@
 <div id="storeItems">
     <div class="storeItem">
         @{
-            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/GreenShirt"));
+            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/GreenShirt1"));
             <img src="@imagePaths[0]" width=@mainImageDimension height=@mainImageDimension />
             <div class="storeSmallImageContainer">
                 @foreach (var imagePath in imagePaths)
@@ -26,7 +26,33 @@
 
     <div class="storeItem">
         @{
-            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/BlueShirt"));
+            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/GreenShirt2"));
+            <img src="@imagePaths[0]" width=@mainImageDimension height=@mainImageDimension />
+            <div class="storeSmallImageContainer">
+                @foreach (var imagePath in imagePaths)
+            {
+                    <img src="@imagePath" width=@smallImageDimension height=@smallImageDimension />
+                }
+            </div>
+        }
+    </div>
+
+    <div class="storeItem">
+        @{
+            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/BlueShirt1"));
+            <img src="@imagePaths[0]" width=@mainImageDimension height=@mainImageDimension />
+            <div class="storeSmallImageContainer">
+                @foreach (var imagePath in imagePaths)
+            {
+                    <img src="@imagePath" width=@smallImageDimension height=@smallImageDimension />
+                }
+            </div>
+        }
+    </div>
+
+    <div class="storeItem">
+        @{
+            imagePaths = Directory.GetFiles(HttpContext.Current.Server.MapPath("../Content/Images/BlueShirt2"));
             <img src="@imagePaths[0]" width=@mainImageDimension height=@mainImageDimension />
             <div class="storeSmallImageContainer">
                 @foreach (var imagePath in imagePaths)
