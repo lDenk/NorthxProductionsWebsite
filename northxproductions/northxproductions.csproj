@@ -219,6 +219,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\ArrowLeft.png" />
     <Content Include="Content\Images\ArrowRight.png" />
+    <Content Include="Content\Images\GreenShirt\aGreenShirtGenericFront.png" />
+    <Content Include="Content\Images\GreenShirt\GreenShirtBackPlain.png" />
+    <Content Include="Content\Images\GreenShirt\GreenShirtLogoFront.png" />
+    <Content Include="Content\Images\GreenShirt\GreenShirtSleeveSide.png" />
     <Content Include="Content\Images\mobileBurger.png" />
     <Content Include="Content\Images\NorthxLogoNavBar.png" />
     <Content Include="Content\Images\StoreBanner.png" />
