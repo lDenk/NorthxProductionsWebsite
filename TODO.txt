@@ -12,3 +12,6 @@
 - make sure everything plays nicely with mobile
 - change font
 	- change font is done, but I'm not sure if it is the font we want
+
+- make northx logo clickable to return to home page
+- give space between store items; the names of adjacent items run into each other
