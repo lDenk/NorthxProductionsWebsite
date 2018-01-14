@@ -41,7 +41,7 @@
                     allowfullscreen></iframe>
         </div>
     </div>
-    <div id="testVideos">
+    <div id="videosContainer">
 
     </div>
 </div>
@@ -56,9 +56,6 @@
     }
 
     function initClient() {
-        var testElement = document.getElementById("testVideos");
-        testElement.style = "background-color: purple; padding: 10px;";
-
         var request = gapi.client.request({
             "method": "GET",
             "path": "/youtube/v3/playlists",
@@ -69,16 +66,12 @@
 
     function executeRequest(request) {
         request.execute(function (response) {
-            console.log(response);
-            var testElement = document.getElementById("testVideos");
-            //testElement.innerText = response.items.length;
-            testElement.style = "background-color: orange; padding: 10px; color: white;";
-
+            var elVideosContainer = document.getElementById("videosContainer");
             var request, elPlaylistContainer, elPlaylistTitle;
             response.items.forEach(function (item) {
                 elPlaylistContainer = document.createElement("div");
                 elPlaylistContainer.setAttribute("id", item.contentDetails.id);
-                testElement.appendChild(elPlaylistContainer);
+                elVideosContainer.appendChild(elPlaylistContainer);
 
                 elPlaylistTitle = document.createElement("span");
                 elPlaylistTitle.innerHTML = item.snippet.title;
@@ -92,18 +85,12 @@
                 executeRequest2(request, item.contentDetails.id);
             });
         }, function (error) {
-            testElement.style = "background-color: red; padding: 10px;";
             console.log(error);
         });
     }
 
     function executeRequest2(request, playlistId) {
         request.execute(function (response) {
-            console.log(response);
-            var testElement = document.getElementById("testVideos");
-            //testElement.innerText = response.player.embedHtml;
-            testElement.style = "background-color: blue; padding: 10px;";
-
             var elVideo, elPlaylistContainer;
             response.items.forEach(function (item) {
                 elVideo = document.createElement("iframe");
@@ -115,9 +102,7 @@
                 elPlaylistContainer = document.getElementById(playlistId);
                 elPlaylistContainer.appendChild(elVideo);
             });
-
         }, function (error) {
-            testElement.style = "background-color: pink; padding: 10px;";
             console.log(error);
         });
     }
