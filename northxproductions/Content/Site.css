@@ -130,7 +130,13 @@ span {
     display: flex;
 }
 
-/* Video player homepage */
+/* VIDEOS PAGE STYLING */
+
+.playlist {
+    overflow: hidden;
+    max-height: 20px;
+}
+
 .my-video-container {
     margin: 50px;
     padding: 50px 20px;

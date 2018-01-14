@@ -47,6 +47,9 @@
 </div>
 
 <script>
+    // Add playlist heights to this object in this format { playlistId.toString(): playlistHeight }
+    var playlistHeights = {};
+
     /**
     * Load the API's client and auth2 modules.
     * Call the initClient function after the modules load.
@@ -66,23 +69,29 @@
 
     function loadPlaylists(request) {
         request.execute(function (response) {
-            var elVideosContainer = document.getElementById("videosContainer");
-            var request, elPlaylistContainer, elPlaylistTitle;
+            var elPlaylistsContainer = document.getElementById("videosContainer");
+            var request, elContainer, elPlaylistTitle, playlistId;
             response.items.forEach(function (item) {
-                elPlaylistContainer = document.createElement("div");
-                elPlaylistContainer.setAttribute("id", item.contentDetails.id);
-                elVideosContainer.appendChild(elPlaylistContainer);
+                playlistId = item.id;
 
-                elPlaylistTitle = document.createElement("span");
+                elPlaylistContainer = document.createElement("div");
+                elPlaylistContainer.setAttribute("id", playlistId);
+                elContainer.appendChild(elPlaylistContainer);
+
+                elPlaylistTitle = document.createElement("div");
                 elPlaylistTitle.innerHTML = item.snippet.title;
+                elPlaylistTitle.addEventListener("click", this.functionDelegate(this.togglePlaylist, { playlistId: playlistId }));
                 elPlaylistContainer.appendChild(elPlaylistTitle);
+
+                elPlaylistContainer.setAttribute("data-collapsed", "1");
+                elPlaylistContainer.setAttribute("class", "playlist");
 
                 request = gapi.client.request({
                     "method": "GET",
                     "path": "/youtube/v3/playlistItems",
-                    "params": { "part": "contentDetails", "key": "AIzaSyBp7ob9Yt1ENwk7GBtskouk-rsROfLEufQ", "playlistId": item.id }
+                    "params": { "part": "contentDetails", "key": "AIzaSyBp7ob9Yt1ENwk7GBtskouk-rsROfLEufQ", "playlistId": playlistId }
                 });
-                loadVideos(request, item.contentDetails.id);
+                loadVideos(request, playlistId);
             });
         }, function (error) {
             console.log(error);
@@ -105,6 +114,22 @@
         }, function (error) {
             console.log(error);
         });
+    }
+
+    function togglePlaylist(event, params) {
+        var playlistId = params.playlistId;
+
+        var elPlaylistContainer = document.getElementById(playlistId);
+        var collapse = elPlaylistContainer.getAttribute("data-collapsed");
+        if (elPlaylistContainer.getAttribute("data-collapsed") === "1") {
+            elPlaylistContainer.setAttribute("data-collapsed", "0");
+            var playlistHeight = elPlaylistContainer.offsetHeight;
+            elPlaylistContainer.style.maxHeight = playlistHeight + "px";
+        }
+        else {
+            elPlaylistContainer.setAttribute("data-collapsed", "1");
+            elPlaylistContainer.style.maxHeight = "";
+        }
     }
 </script>
 
@@ -185,11 +210,11 @@
     }
 
     var _this = this;
-    function functionDelegate(delegate) {
+    function functionDelegate(delegate, params) {
         // Summary: Return a function that will call the delegate with the correct context.
         // delegate: function to call when event is triggered.
         return function (event) {
-            delegate.call(_this, event);
+            delegate.call(_this, event, params);
         }
     }
 </script>
