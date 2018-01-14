@@ -7,7 +7,15 @@
 	https://developers.google.com/youtube/v3/guides/authentication - we're going to need to get the authorization completed
 	We'll then have to query for playlist ids use the mine parameter: https://developers.google.com/youtube/v3/docs/playlists/list
 	Then we'll query for all of the playlist's items for each playlist id: https://developers.google.com/youtube/v3/docs/playlistItems/list
-	Input in url for testing: https://www.googleapis.com/youtube/v3/playlists?part=contentDetails&chart=mostPopular&key=AIzaSyDpPl0dO0HwQ1ma4829rx5d6BjGXiXZ8HA
+	Input in url for testing: 
+https://www.googleapis.com/youtube/v3/playlists?part=contentDetails&mine=true&key=AIzaSyDpPl0dO0HwQ1ma4829rx5d6BjGXiXZ8HA
+https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=PLj0_fFvs8OMBP3nN19yz6Z6XzequnxEiX&key=AIzaSyDpPl0dO0HwQ1ma4829rx5d6BjGXiXZ8HA
+
+https://www.googleapis.com/youtube/v3/playlists?part=contentDetails&mine=true
+https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=PLj0_fFvs8OMBP3nN19yz6Z6XzequnxEiX
+https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=yHNdwqk95gc
+<iframe width="560" height="315" src="//www.youtube.com/embed/' + videoId></iframe>
+
 
 - make sure everything plays nicely with mobile
 - change font
