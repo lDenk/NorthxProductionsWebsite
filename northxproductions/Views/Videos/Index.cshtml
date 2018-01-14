@@ -61,10 +61,10 @@
             "path": "/youtube/v3/playlists",
             "params": { "part": "snippet,contentDetails", "key": "AIzaSyBp7ob9Yt1ENwk7GBtskouk-rsROfLEufQ", "channelId": "UCYIDzVDq37pkTk6PT-yM39g" }
         });
-        executeRequest(request);
+        loadPlaylists(request);
     }
 
-    function executeRequest(request) {
+    function loadPlaylists(request) {
         request.execute(function (response) {
             var elVideosContainer = document.getElementById("videosContainer");
             var request, elPlaylistContainer, elPlaylistTitle;
@@ -82,14 +82,14 @@
                     "path": "/youtube/v3/playlistItems",
                     "params": { "part": "contentDetails", "key": "AIzaSyBp7ob9Yt1ENwk7GBtskouk-rsROfLEufQ", "playlistId": item.id }
                 });
-                executeRequest2(request, item.contentDetails.id);
+                loadVideos(request, item.contentDetails.id);
             });
         }, function (error) {
             console.log(error);
         });
     }
 
-    function executeRequest2(request, playlistId) {
+    function loadVideos(request, playlistId) {
         request.execute(function (response) {
             var elVideo, elPlaylistContainer;
             response.items.forEach(function (item) {
