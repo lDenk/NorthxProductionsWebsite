@@ -85,6 +85,7 @@
 
                 elVideosContainer = document.createElement("div");
                 elVideosContainer.setAttribute("id", "videos-" + item.id);
+                elVideosContainer.setAttribute("class", "videosContainer");
                 elPlaylistContainer.appendChild(elVideosContainer);
 
                 elPlaylistContainer.setAttribute("data-collapsed", "1");
@@ -109,15 +110,19 @@
         // elVideosContainer: element to hold all of the individual videos
 
         request.execute(function (response) {
-            var elVideo, elPlaylistContainer;
+            var elVideo, elVideoContainer, elPlaylistContainer;
             response.items.forEach(function (item) {
                 elVideo = document.createElement("iframe");
-                elVideo.width = "200";
-                elVideo.height = "100";
+                elVideo.width = "500";
+                elVideo.height = "300";
                 elVideo.src = "//www.youtube.com/embed/" + item.contentDetails.videoId;
                 elVideo.frameBorder = "0";
 
-                elVideosContainer.appendChild(elVideo);
+                elVideoContainer = document.createElement("div");
+                elVideoContainer.setAttribute("class", "playlistVideo");
+                elVideoContainer.appendChild(elVideo);
+
+                elVideosContainer.appendChild(elVideoContainer);
             });
         }, function (error) {
             console.log(error);

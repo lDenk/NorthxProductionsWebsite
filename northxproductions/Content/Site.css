@@ -141,6 +141,18 @@ span {
     transform: rotate(90deg);
 }
 
+.videosContainer {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.playlistVideo {
+    padding: 10px;
+    width: 100%;
+    flex: 0 50%;
+}
+
 .my-video-container {
     margin: 50px;
     padding: 50px 20px;
