@@ -77,9 +77,7 @@
                 elPlaylistContainer.setAttribute("id", "playlist-" + item.id);
                 elContainer.appendChild(elPlaylistContainer);
 
-                elPlaylistTitle = document.createElement("div");
-                elPlaylistTitle.innerHTML = item.snippet.title;
-                elPlaylistTitle.addEventListener("click", this.functionDelegate(this.togglePlaylist, { playlistId: item.id }));
+                elPlaylistTitle = this.createPlaylistTitle(item.snippet.title, item.id);
                 elPlaylistContainer.appendChild(elPlaylistTitle);
 
                 elVideosContainer = document.createElement("div");
@@ -142,6 +140,22 @@
             elPlaylistContainer.setAttribute("data-collapsed", "1");
             elPlaylistContainer.style.maxHeight = "";
         }
+    }
+
+    function createPlaylistTitle(titleText, playlistId) {
+        // Summary: Create HTML for playlist title
+        // titleText: The text for the title
+        // playlistId: The youtube playlist id
+
+        // Use a span, so custom font is applied.
+        var elTitle = document.createElement("span");
+        elTitle.innerHTML = titleText;
+
+        var elTitleContainer = document.createElement("div");
+        elTitleContainer.addEventListener("click", this.functionDelegate(this.togglePlaylist, { playlistId: playlistId }));
+        elTitleContainer.appendChild(elTitle);
+
+        return elTitleContainer;
     }
 </script>
 
