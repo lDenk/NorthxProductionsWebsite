@@ -137,6 +137,10 @@ span {
     transition: max-height 0.5s;
 }
 
+.playlist[data-collapsed="0"] > div > img {
+    transform: rotate(90deg);
+}
+
 .my-video-container {
     margin: 50px;
     padding: 50px 20px;

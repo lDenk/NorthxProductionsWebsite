@@ -48,7 +48,7 @@
 
 <script>
     // Number for the max height of a playlist when it is collapsed.
-    var playlistMaxHeight = 30;
+    var playlistMaxHeight = 35;
 
     /**
     * Load the API's client and auth2 modules.
@@ -151,12 +151,18 @@
         // titleText: The text for the title
         // playlistId: The youtube playlist id
 
-        // Use a span, so custom font is applied.
+        var elTitleContainer = document.createElement("div");
+        elTitleContainer.setAttribute("class", "left");
+        elTitleContainer.addEventListener("click", this.functionDelegate(this.togglePlaylist, { playlistId: playlistId }));
+
+        var elCarot = document.createElement("img");
+        elCarot.src = "/Content/Images/PlaylistCarot.png";
+        elCarot.width = 50;
+        elCarot.height = 50;
+        elTitleContainer.appendChild(elCarot);
+
         var elTitle = document.createElement("span");
         elTitle.innerHTML = titleText;
-
-        var elTitleContainer = document.createElement("div");
-        elTitleContainer.addEventListener("click", this.functionDelegate(this.togglePlaylist, { playlistId: playlistId }));
         elTitleContainer.appendChild(elTitle);
 
         return elTitleContainer;

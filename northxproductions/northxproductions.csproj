@@ -231,6 +231,7 @@
     <Content Include="Content\Images\mobileBurger.png" />
     <Content Include="Content\Images\NorthxLogoNavBar.png" />
     <Content Include="Content\Images\NorthxLogoWhiteBackground.png" />
+    <Content Include="Content\Images\PlaylistCarot.png" />
     <Content Include="Content\Images\StoreBanner.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
