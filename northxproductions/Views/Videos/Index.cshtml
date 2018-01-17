@@ -16,7 +16,7 @@
 
 <script>
     // Number for the max height of a playlist when it is collapsed.
-    var playlistMaxHeight = 45;
+    var playlistMaxHeight = 70;
 
     /**
     * Load the API's client and auth2 modules.
@@ -139,6 +139,10 @@
         elTitle.setAttribute("class", "playlistTitle");
         elTitle.innerHTML = titleText;
         elTitleContainer.appendChild(elTitle);
+
+        var hrule = document.createElement("div");
+        hrule.setAttribute("class", "hrule");
+        elTitleContainer.appendChild(hrule);
 
         return elTitleContainer;
     }

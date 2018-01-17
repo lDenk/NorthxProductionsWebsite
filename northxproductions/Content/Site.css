@@ -157,6 +157,12 @@ span {
     font-size: 24pt;
 }
 
+.hrule {
+    background-color: black;
+    height: 1px;
+    margin: 0 13px;
+}
+
 .my-video-container {
     margin: 50px;
     padding: 50px 20px;
