@@ -47,9 +47,6 @@
 </div>
 
 <script>
-    // Add playlist heights to this object in this format { playlistId.toString(): playlistHeight }
-    var playlistHeights = {};
-
     /**
     * Load the API's client and auth2 modules.
     * Call the initClient function after the modules load.
@@ -68,9 +65,12 @@
     }
 
     function loadPlaylists(request) {
+        // Summary: Load all of the playlists for the youtube channel and setup the HTML structure
+        // request: google api created request object for retreiving the playlists
+
         request.execute(function (response) {
             var elContainer = document.getElementById("videosContainer");
-            var request, elPlaylistContainer, elPlaylistTitle, elVideoContainer;
+            var request, elPlaylistContainer, elPlaylistTitle, elVideosContainer;
             response.items.forEach(function (item) {
 
                 elPlaylistContainer = document.createElement("div");
@@ -102,6 +102,10 @@
     }
 
     function loadVideos(request, elVideosContainer) {
+        // Summary: Load all of the videos for each playlist
+        // request: google api created request object for retreiving the videos
+        // elVideosContainer: element to hold all of the individual videos
+
         request.execute(function (response) {
             var elVideo, elPlaylistContainer;
             response.items.forEach(function (item) {
@@ -119,6 +123,10 @@
     }
 
     function togglePlaylist(event, params) {
+        // Summary: Expand/collapse the playlist via the data-collapsed attribute and maxHeight styling
+        // event: The event that is triggered
+        // params: Object passed in in this format: { playlistId: "thePlaylistId" }
+
         var playlistId = params.playlistId;
 
         var elVideosContainer = document.getElementById("videos-" + playlistId);
