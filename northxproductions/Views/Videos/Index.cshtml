@@ -9,38 +9,6 @@
     <h2>
         Projects
     </h2>
-    <div id="videoProjectNames">
-        @foreach (NxVideoProjectModel project in Model.Projects)
-            {
-            <span class="videoProjectName">
-                @project.ProjectName
-            </span>
-        }
-    </div>
-    <div>
-        <div>
-            @foreach (NxVideoProjectModel project in Model.Projects)
-            {
-                <div class="noDisp" id="@project.ProjectName.Replace(" ", String.Empty)">
-                    <span class="separator"></span>
-                    @foreach (NxVideo video in project.Project)
-                    {
-                        <span class="separator"></span>
-                        <span class="my-video-table-videoname" id="@video.Embed">
-                            @video.Name
-                        </span>
-                        <span class="separator"></span>
-                    }
-                    <span class="separator"></span>
-                </div>
-            }
-            <iframe id="vid-popup-iframe" class="my-vid-popup-iframe"
-                    width="640" height="360"
-                    src=""
-                    frameborder="0"
-                    allowfullscreen></iframe>
-        </div>
-    </div>
     <div id="videosContainer">
 
     </div>
@@ -138,6 +106,7 @@
 
         var elVideosContainer = document.getElementById("videos-" + playlistId);
         var elPlaylistContainer = document.getElementById("playlist-" + playlistId);
+
         var collapse = elVideosContainer.getAttribute("data-collapsed");
         if (elPlaylistContainer.getAttribute("data-collapsed") === "1") {
             elPlaylistContainer.setAttribute("data-collapsed", "0");
@@ -173,83 +142,6 @@
 
         return elTitleContainer;
     }
-</script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script async defer src="https://apis.google.com/js/api.js"
-        onload="this.onload=function(){};handleClientLoad()"
-        onreadystatechange="if (this.readyState === 'complete') this.onload()">
-</script>
-
-<script>
-    var videoProjectNames = document.getElementsByClassName("videoProjectName");
-    for (var i = 0; i < videoProjectNames.length; i++) {
-        videoProjectNames[i].addEventListener("click", functionDelegate(selectProject));
-    }
-
-    // Show the table for the Parachute project
-    this.elSelectedProjectTable = document.getElementById("Parachute");
-    this.elSelectedProjectName = videoProjectNames[0];
-    this.switchProjects(this.elSelectedProjectTable.id, this.elSelectedProjectName);
-
-    var videoNames = document.getElementsByClassName("my-video-table-videoname");
-    for (var i = 0; i < videoNames.length; i++) {
-        videoNames[i].addEventListener("click", functionDelegate(selectVideo));
-    }
-
-    this.elSelectedVideoName = videoNames[0];
-    this.switchVideos(this.elSelectedVideoName);
-    this.showPopup(this.elSelectedVideoName.id);
-
-    function selectVideo(event) {
-        // Summary: Select video to watch.
-        if (event.target === this.elSelectedVideoName) {
-            return;
-        }
-
-        this.showPopup(event.target.id);
-        this.switchVideos(event.target);
-    }
-
-    function switchVideos(elTarget)
-    {
-        // Summary: Switch/set selected video
-        // elTarget: The target element (video name) that we're switching to/setting
-        this.elSelectedVideoName.setAttribute("data-selected", "false");
-        this.elSelectedVideoName = elTarget;
-        this.elSelectedVideoName.setAttribute("data-selected", "true");
-    }
-
-    function showPopup(source) {
-        // Summary: Show video popup.
-        // source: String representing the source of the video
-
-        document.getElementById('vid-popup-iframe').src = source;
-    }
-
-    function selectProject(event) {
-        // Summary: Hide previously selected project video names and show currently selected project video names.
-        var elementId = event.target.innerText.split(" ").join("");
-        if (elementId === this.elSelectedProjectTable.id) {
-            return;
-        }
-
-        this.switchProjects(elementId, event.target);
-    }
-
-    function switchProjects(projectId, elTarget) {
-        // Summary: Switch/set selected projects.
-        // projectId: The id of the project table to display
-        // elTarget: The target element (project name) that we're switching to/setting
-
-        this.elSelectedProjectName.setAttribute("data-selected", "false");
-        this.elSelectedProjectName = elTarget;
-        this.elSelectedProjectName.setAttribute("data-selected", "true");
-
-        this.elSelectedProjectTable.setAttribute("class", "noDisp");
-        this.elSelectedProjectTable = document.getElementById(projectId);
-        this.elSelectedProjectTable.setAttribute("class", "videoNames");
-    }
 
     var _this = this;
     function functionDelegate(delegate, params) {
@@ -259,4 +151,10 @@
             delegate.call(_this, event, params);
         }
     }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script async defer src="https://apis.google.com/js/api.js"
+        onload="this.onload=function(){};handleClientLoad()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()">
 </script>
