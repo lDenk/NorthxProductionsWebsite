@@ -153,6 +153,10 @@ span {
     flex: 0 50%;
 }
 
+.playlistTitle {
+    font-size: 24pt;
+}
+
 .my-video-container {
     margin: 50px;
     padding: 50px 20px;
