@@ -47,6 +47,9 @@
 </div>
 
 <script>
+    // Number for the max height of a playlist when it is collapsed.
+    var playlistMaxHeight = 30;
+
     /**
     * Load the API's client and auth2 modules.
     * Call the initClient function after the modules load.
@@ -85,6 +88,7 @@
                 elPlaylistContainer.appendChild(elVideosContainer);
 
                 elPlaylistContainer.setAttribute("data-collapsed", "1");
+                elPlaylistContainer.style.maxHeight = playlistMaxHeight + "px";
                 elPlaylistContainer.setAttribute("class", "playlist");
 
                 request = gapi.client.request({
@@ -134,11 +138,11 @@
             elPlaylistContainer.setAttribute("data-collapsed", "0");
 
             var playlistHeight = elVideosContainer.offsetHeight;
-            elPlaylistContainer.style.maxHeight = (playlistHeight + 20) + "px";
+            elPlaylistContainer.style.maxHeight = (playlistHeight + playlistMaxHeight) + "px";
         }
         else {
             elPlaylistContainer.setAttribute("data-collapsed", "1");
-            elPlaylistContainer.style.maxHeight = "";
+            elPlaylistContainer.style.maxHeight = playlistMaxHeight + "px";
         }
     }
 

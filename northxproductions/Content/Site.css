@@ -134,7 +134,6 @@ span {
 
 .playlist {
     overflow: hidden;
-    max-height: 20px;
     transition: max-height 0.5s;
 }
 
