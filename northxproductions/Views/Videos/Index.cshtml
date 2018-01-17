@@ -69,19 +69,22 @@
 
     function loadPlaylists(request) {
         request.execute(function (response) {
-            var elPlaylistsContainer = document.getElementById("videosContainer");
-            var request, elContainer, elPlaylistTitle, playlistId;
+            var elContainer = document.getElementById("videosContainer");
+            var request, elPlaylistContainer, elPlaylistTitle, elVideoContainer;
             response.items.forEach(function (item) {
-                playlistId = item.id;
 
                 elPlaylistContainer = document.createElement("div");
-                elPlaylistContainer.setAttribute("id", playlistId);
+                elPlaylistContainer.setAttribute("id", "playlist-" + item.id);
                 elContainer.appendChild(elPlaylistContainer);
 
                 elPlaylistTitle = document.createElement("div");
                 elPlaylistTitle.innerHTML = item.snippet.title;
-                elPlaylistTitle.addEventListener("click", this.functionDelegate(this.togglePlaylist, { playlistId: playlistId }));
+                elPlaylistTitle.addEventListener("click", this.functionDelegate(this.togglePlaylist, { playlistId: item.id }));
                 elPlaylistContainer.appendChild(elPlaylistTitle);
+
+                elVideosContainer = document.createElement("div");
+                elVideosContainer.setAttribute("id", "videos-" + item.id);
+                elPlaylistContainer.appendChild(elVideosContainer);
 
                 elPlaylistContainer.setAttribute("data-collapsed", "1");
                 elPlaylistContainer.setAttribute("class", "playlist");
@@ -89,16 +92,16 @@
                 request = gapi.client.request({
                     "method": "GET",
                     "path": "/youtube/v3/playlistItems",
-                    "params": { "part": "contentDetails", "key": "AIzaSyBp7ob9Yt1ENwk7GBtskouk-rsROfLEufQ", "playlistId": playlistId }
+                    "params": { "part": "contentDetails", "key": "AIzaSyBp7ob9Yt1ENwk7GBtskouk-rsROfLEufQ", "playlistId": item.id }
                 });
-                loadVideos(request, playlistId);
+                loadVideos(request, elVideosContainer);
             });
         }, function (error) {
             console.log(error);
         });
     }
 
-    function loadVideos(request, playlistId) {
+    function loadVideos(request, elVideosContainer) {
         request.execute(function (response) {
             var elVideo, elPlaylistContainer;
             response.items.forEach(function (item) {
@@ -108,8 +111,7 @@
                 elVideo.src = "//www.youtube.com/embed/" + item.contentDetails.videoId;
                 elVideo.frameBorder = "0";
 
-                elPlaylistContainer = document.getElementById(playlistId);
-                elPlaylistContainer.appendChild(elVideo);
+                elVideosContainer.appendChild(elVideo);
             });
         }, function (error) {
             console.log(error);
@@ -119,12 +121,14 @@
     function togglePlaylist(event, params) {
         var playlistId = params.playlistId;
 
-        var elPlaylistContainer = document.getElementById(playlistId);
-        var collapse = elPlaylistContainer.getAttribute("data-collapsed");
+        var elVideosContainer = document.getElementById("videos-" + playlistId);
+        var elPlaylistContainer = document.getElementById("playlist-" + playlistId);
+        var collapse = elVideosContainer.getAttribute("data-collapsed");
         if (elPlaylistContainer.getAttribute("data-collapsed") === "1") {
             elPlaylistContainer.setAttribute("data-collapsed", "0");
-            var playlistHeight = elPlaylistContainer.offsetHeight;
-            elPlaylistContainer.style.maxHeight = playlistHeight + "px";
+
+            var playlistHeight = elVideosContainer.offsetHeight;
+            elPlaylistContainer.style.maxHeight = (playlistHeight + 20) + "px";
         }
         else {
             elPlaylistContainer.setAttribute("data-collapsed", "1");
