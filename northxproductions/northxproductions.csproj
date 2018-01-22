@@ -196,6 +196,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MusicController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\VideosController.cs" />
     <Compile Include="Global.asax.cs">
@@ -230,8 +231,14 @@
     <Content Include="Content\Images\GreenShirt2\GreenShirtSleeveSide.png" />
     <Content Include="Content\Images\mobileBurger.png" />
     <Content Include="Content\Images\NorthxLogoNavBar.png" />
+    <Content Include="Content\Images\NorthxLogoTabIcon.png" />
     <Content Include="Content\Images\NorthxLogoWhiteBackground.png" />
     <Content Include="Content\Images\PlaylistCarot.png" />
+    <Content Include="Content\Images\SocialMediaIcons\facebookIcon.png" />
+    <Content Include="Content\Images\SocialMediaIcons\instagramIcon.png" />
+    <Content Include="Content\Images\SocialMediaIcons\tumblrIcon.png" />
+    <Content Include="Content\Images\SocialMediaIcons\twitterIcon.png" />
+    <Content Include="Content\Images\SocialMediaIcons\youtubeIcon.png" />
     <Content Include="Content\Images\StoreBanner.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -291,7 +298,9 @@
     <Content Include="Views\Admin\Login.cshtml" />
     <Content Include="Views\Admin\AdminControls.cshtml" />
     <Content Include="Views\Admin\AdminVideos.cshtml" />
-    <Content Include="Views\Store\StoreIndex.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Shared\_SocialMediaPartial.cshtml" />
+    <Content Include="Views\Music\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

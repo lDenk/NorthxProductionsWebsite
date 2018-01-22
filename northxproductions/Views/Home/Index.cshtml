@@ -6,12 +6,19 @@
 
 
 <table align="center">
+
     <tr>
-        <td>
+        <td class="my-video-container">
+            <iframe width="640" height="360"
+                    src="https://www.youtube.com/embed/lFdNUbgQpok"
+                    frameborder="0"
+                    allowfullscreen></iframe>
+        </td>
+        @*<td>
             @using (Html.BeginForm("GetPrev", "Home"))
             {
                 <input type="hidden" name="Id" value="@Model.Id" />
-                <input id="prev" type="image" src="~/Content/Images/ArrowLeft.png" width="30" height="30"/>
+                <input class="scrollArrowHome" id="prev" type="image" src="~/Content/Images/ArrowLeft.png" width="30" height="30"/>
             }
         </td>
         <td class="my-video-container">
@@ -24,8 +31,8 @@
             @using (Html.BeginForm("GetNext", "Home"))
             {
                 <input type="hidden" name="Id" value="@Model.Id" />
-                <input id="next" type="image" src="~/Content/Images/ArrowRight.png" width="30" height="30"/>
+                <input class="scrollArrowHome" id="next" type="image" src="~/Content/Images/ArrowRight.png" width="30" height="30"/>
             }
-        </td>
+        </td>*@
     </tr>
 </table>

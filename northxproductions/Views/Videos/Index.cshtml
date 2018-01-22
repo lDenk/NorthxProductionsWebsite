@@ -6,11 +6,11 @@
 @using northxproductions.Models
 @model NxVideoProjectsListModel
 <div class="my-video-page-container">
+    <div class="playlistPadding">Videos</div>
     <h2>
-        Projects
     </h2>
     <div id="videosContainer">
-
+        
     </div>
 </div>
 
@@ -131,19 +131,19 @@
 
         var elCarot = document.createElement("img");
         elCarot.src = "/Content/Images/PlaylistCarot.png";
-        elCarot.width = 50;
-        elCarot.height = 50;
+        elCarot.width = 40;
+        elCarot.height = 40;
         elTitleContainer.appendChild(elCarot);
 
         var elTitle = document.createElement("span");
         elTitle.setAttribute("class", "playlistTitle");
         elTitle.innerHTML = titleText;
         elTitleContainer.appendChild(elTitle);
-
+        /*
         var hrule = document.createElement("div");
         hrule.setAttribute("class", "hrule");
         elTitleContainer.appendChild(hrule);
-
+        */
         return elTitleContainer;
     }
 
