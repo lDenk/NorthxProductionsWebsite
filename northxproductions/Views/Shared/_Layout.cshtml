@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/Images/NorthxLogoTabIcon.png" />
     <title>@ViewBag.Title - Northx Productions</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -84,14 +85,16 @@
         <div id="desktopMenu">
             <div class="desktopMenuMargin"></div>
             @Html.ActionLink("Videos", "Index", "Videos", null, new { @class = "desktopMenuItem" })
-            @Html.ActionLink("Music", "Music", "Home", null, new { @class = "desktopMenuItem" })
+            @Html.ActionLink("Music", "Index", "Music", null, new { @class = "desktopMenuItem" })
             <a href="http://northxproductions.tumblr.com" target="_blank" class="desktopMenuItem">Blog</a>
             @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "desktopMenuItem" })
-            @Html.ActionLink("Store", "StoreIndex", "Store", null, new { @class = "desktopMenuItem" })
+            @Html.ActionLink("Store", "Index", "Store", null, new { @class = "desktopMenuItem" })
             <div class="desktopMenuMargin"></div>
         </div>
         <div id="desktopLogo">
-            <img src="~/Content/Images/NorthxLogoWhiteBackground.png" width="90" />
+            <a href='@Url.Action("Index", "Home")'>
+                <img src="~/Content/Images/NorthxLogoWhiteBackground.png" width="45" />
+            </a>
         </div>
     </div>
 
@@ -106,11 +109,15 @@
             </div>
             <hr />
             <div id="footer">
-                <div class="desktopMenuMargin"></div>
-                <footer>
-                    <p>&copy; @DateTime.Now.Year - Northx Productions</p>
+                @* 1/18- commented out margin for footer
+                    <div class="desktopMenuMargin"></div>
+                *@
+                <footer class="footerContent">
+                    <p class="copyrightThing">&copy; @DateTime.Now.Year - Northx Productions, LLC</p>
+                    @*Loads partial view of social media links*@
+                    <div class="socialMediaContainer">@Html.Partial("_SocialMediaPartial")</div>
                 </footer>
-                <div class="desktopMenuMargin"></div>
+                @*<div class="desktopMenuMargin"></div>*@
             </div>
         </div>
     </div>

@@ -6,10 +6,9 @@ using System.Web.Mvc;
 
 namespace northxproductions.Controllers
 {
-    public class StoreController : Controller
+    public class MusicController : Controller
     {
-        // GET: Store
-        
+        // GET: Music
         public ActionResult Index()
         {
             return View();

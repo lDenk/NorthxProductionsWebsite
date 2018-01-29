@@ -47,6 +47,32 @@ span {
     border-top: 1px solid white;
 }
 
+/* Master layout footer */
+.footerContent {
+    width: 100%;
+}
+
+.copyrightThing {
+    padding-left: 10px;
+    display: inline;
+    font-size: .45em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Social Media Icons */
+.socialMediaContainer {
+    float: right;
+    padding-right: 10px;
+    display: inline;
+}
+
+.socialMediaPartial {
+    display: inline;
+}
+
+.socialMediaIcon {
+    display: inline;
+}
 /* Nav bar links */
 .my-nav-bar-item-small {
     text-align: center;
@@ -70,10 +96,11 @@ span {
 }
 
 .desktopMenuMargin {
-    width: 15%;
+    width: 35%;
 }
 
 .desktopMenuItem {
+    font-size: .75em;
     width: 14%;
     text-align: center;
     color: black;
@@ -130,6 +157,12 @@ span {
     display: flex;
 }
 
+/* HOME PAGE STYLING */
+
+.scrollArrowHome {
+    cursor: pointer;
+}
+
 /* VIDEOS PAGE STYLING */
 
 .playlist {
@@ -141,7 +174,14 @@ span {
     transform: rotate(90deg);
 }
 
+.playlistPadding {
+    text-align: left;
+    padding-left: 20px;
+}
+
 .videosContainer {
+    padding-top: 40px;
+    padding-bottom: 40px;
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
@@ -154,13 +194,14 @@ span {
 }
 
 .playlistTitle {
-    font-size: 24pt;
+    font-size: 15pt;
 }
 
 .hrule {
     background-color: black;
     height: 1px;
     margin: 0 13px;
+    padding-right: 50px;
 }
 
 .my-video-container {
@@ -169,7 +210,7 @@ span {
 }
 
 .my-video-page-container {
-    font-size: medium;
+    
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -203,6 +244,27 @@ img.center {
     list-style-position: inside;
 }
 
+/* CONTACT STYLING */
+
+.contactBody {
+    margin-top: 20px;
+}
+
+.contactInformation {
+    font-size: .75em;
+}
+
+.contactOrderForm {
+  width: 100%;
+  height: 1300px;
+  
+}
+
+.noCustomFontContact {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: .75em;
+}
+
 /* STORE STYLING */
 
 #storeItems {
@@ -220,6 +282,36 @@ img.center {
 
 .storeSmallImageContainer {
     margin-top: 10px;
+}
+
+.payPalAddBtn {
+    cursor: pointer;
+    display: inline;
+}
+
+.payPalViewBtn {
+    cursor: pointer;
+}
+
+.shirtSizeLabel {
+    text-align: start;
+    padding-left: 10%;
+}
+
+.storeShirtSizeSelector {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: .75em;
+    /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
+}
+
+.storeShirtSizeSelector > td {
+    /*text-align: center;*/
+}
+
+
+.storeShirtSizeSelectorS { /*Text in size selector was too close to bottom of input box*/
+    padding-bottom: 5px;
 }
 
 /*General classes*/

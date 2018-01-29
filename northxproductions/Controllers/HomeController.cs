@@ -18,16 +18,17 @@ namespace northxproductions.Controllers
             return View(GetVideo());
         }
 
-        public ActionResult Music()
+        /*public ActionResult Music()
         {
             return View();
-        }
+        }*/
 
         public ActionResult NewsFeed()
         {
             return View();
         }
 
+        [ActionName("Contact")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

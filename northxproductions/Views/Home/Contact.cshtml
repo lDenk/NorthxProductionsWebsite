@@ -1,15 +1,20 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title</h2>
-Email - <a class="noCustomFont" href="http://mail.google.com/mail/?view=cm&fs=1&to=northx.prod@gmail.com" target="_blank">northx.prod@gmail.com</a>
-<br />
-<br />
-Joe Micholic - <span class="noCustomFont">(715) 573 - 5025</span>
-<br />
-Jack Micholic - <span class="noCustomFont">(715) 581 - 5025</span>
-<br />
-<br />
-<div class="center">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKYIqY0wysEZ6vo82PuF2zNjjwUF8wqeqvhsLomhjmXFkD7g/viewform?embedded=true" width="760" height="2300" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<div class="contactBody">
+    @*<h2>@ViewBag.Title</h2>*@
+
+    <div class="contactInformation">
+        Email - <a class="noCustomFontContact" href="http://mail.google.com/mail/?view=cm&fs=1&to=northx.prod@gmail.com" target="_blank">northx.prod@gmail.com</a>
+        <br />
+        <br />
+        Joe Micholic - <span class="noCustomFontContact">(715) 573 - 5025</span>
+        <br />
+        Jack Micholic - <span class="noCustomFontContact">(715) 581 - 5025</span>
+        <br />
+        <br />
+    </div>
+    <div class="center">
+        <iframe class="contactOrderForm" src="https://docs.google.com/forms/d/1S9M9qewD8iLjI3KkY7Hr4UlcujUncLfCTiOtXWiQnpg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
 </div>
