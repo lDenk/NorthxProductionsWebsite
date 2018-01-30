@@ -30,7 +30,7 @@
         var request = gapi.client.request({
             "method": "GET",
             "path": "/youtube/v3/playlists",
-            "params": { "part": "snippet,contentDetails", "key": "AIzaSyBp7ob9Yt1ENwk7GBtskouk-rsROfLEufQ", "channelId": "UCYIDzVDq37pkTk6PT-yM39g" }
+            "params": { "part": "snippet,contentDetails", "key": "AIzaSyBp7ob9Yt1ENwk7GBtskouk-rsROfLEufQ", "channelId": "UCYIDzVDq37pkTk6PT-yM39g", "maxResults": "50" }
         });
         loadPlaylists(request);
     }
@@ -63,7 +63,7 @@
                 request = gapi.client.request({
                     "method": "GET",
                     "path": "/youtube/v3/playlistItems",
-                    "params": { "part": "contentDetails", "key": "AIzaSyBp7ob9Yt1ENwk7GBtskouk-rsROfLEufQ", "playlistId": item.id }
+                    "params": { "part": "contentDetails", "key": "AIzaSyBp7ob9Yt1ENwk7GBtskouk-rsROfLEufQ", "playlistId": item.id, "maxResults": "50" }
                 });
                 loadVideos(request, elVideosContainer);
             });
