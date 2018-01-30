@@ -13,19 +13,14 @@
 - TO PAUL:
 - in the loadPlaylists() function on the videos index page can we add a condition to make sure a playlist
 	has at least one video before we add it too the page.  Looking at that playlist "x", not sure what that is.
+	- This will require radical changes to the code.  It can be done, but I need to set aside a chunk of time to do it.
 - also, maybe we should wait to load the videos until their carot is clicked.  not sure how hard this will be.  
 	wanted to wait for you to get back before making any changes to the javascript.  just worried that -once there
 	are more videos- the page will take too long to load.
-- there is also some strange behavior with the horizontal rules on the videos page.  seems like it is rendered
-	twice under the business playlist, and are being rendered twice for some of the other playlists depending on 
-	how many of them are open.  Took them out for now, think it looks pretty good actually.
-- Be amazing, and football playlists are not showing up.
 _______________________________________________________________________________________________________________________________________________________
 
 Things that are done, but want to keep around for reminders/notes:
 
-- setup store page with pictures and prices and all that jazz
-	- waiting on buttons from jack and joe; the buttons being used right now are associated with Paul's paypal account and cost .01 dollars
 - change font
 	- change font is done, but I'm not sure if it is the font we want
 - automatically get youtube videos; the following indents are notes for completed youtube work, so you don't need to pay much attention to them
@@ -52,3 +47,4 @@ Finished:
 - copy pdf layout (see folder where TODO.txt resides for pdf layout)
 - put more space between playlist titles and the first video
 	the user can see the top of the first video for each playlist
+- setup store page with pictures and prices and all that jazz
