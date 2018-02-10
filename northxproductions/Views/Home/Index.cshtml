@@ -8,12 +8,18 @@
 <table align="center">
 
     <tr>
-        <td class="my-video-container">
-            <iframe width="640" height="360"
-                    src="https://www.youtube.com/embed/lFdNUbgQpok"
-                    frameborder="0"
-                    allowfullscreen></iframe>
+        <td>
+            <video width="100%" autoplay>
+                <source src="~/Content/Videos/northxHomepage0218.mp4" />
+            </video>
         </td>
+        @*
+    <td class="my-video-container">
+        <iframe width="640" height="360"
+                src="https://www.youtube.com/embed/lFdNUbgQpok"
+                frameborder="0"
+                allowfullscreen></iframe>
+    </td>*@
         @*<td>
             @using (Html.BeginForm("GetPrev", "Home"))
             {
@@ -36,3 +42,7 @@
         </td>*@
     </tr>
 </table>
+
+<script>
+    document.getElementsByTagName('video')[0].volume = 0.5;
+</script>

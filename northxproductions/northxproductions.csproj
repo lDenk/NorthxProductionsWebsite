@@ -240,6 +240,7 @@
     <Content Include="Content\Images\SocialMediaIcons\twitterIcon.png" />
     <Content Include="Content\Images\SocialMediaIcons\youtubeIcon.png" />
     <Content Include="Content\Images\StoreBanner.png" />
+    <Content Include="Content\Videos\northxHomepage0218.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
