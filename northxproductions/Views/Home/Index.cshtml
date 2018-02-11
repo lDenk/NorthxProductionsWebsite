@@ -9,7 +9,7 @@
 
     <tr>
         <td>
-            <video width="100%" autoplay>
+            <video width="100%">
                 <source src="~/Content/Videos/northxHomepage0218.mp4" />
             </video>
         </td>
@@ -44,5 +44,8 @@
 </table>
 
 <script>
-    document.getElementsByTagName('video')[0].volume = 0.5;
+    var video = document.getElementsByTagName('video')[0];
+    video.volume = 0.5;
+    video.load();
+    video.play();
 </script>
