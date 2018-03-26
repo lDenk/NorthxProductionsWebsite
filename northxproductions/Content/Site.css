@@ -226,6 +226,29 @@ img.center {
     display: block;
 }
 
+/* MUSIC STYLING*/
+
+.musicAlbumTable {
+    margin-right: auto;
+    margin-left : auto;
+    margin-top  : 20px;
+    text-align: center;
+}
+
+.musicAlbumTable > tbody > tr > td {
+    vertical-align: top;
+    padding :   20px;
+}
+/*
+.musicAlbumTableRow {
+
+}
+
+.musicAlbumTableCell {
+    padding-top: 10px;
+}
+*/
+
 /* BLOG STYLING */
 
 .tumblr_post > div > iframe {
