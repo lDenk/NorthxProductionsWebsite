@@ -6,7 +6,7 @@
 body {
     font-family: kustkust;
     font-size: 22pt;
-    overflow: scroll;
+    overflow: auto;
 }
 
 h2 {
@@ -162,6 +162,90 @@ span {
 
 .scrollArrowHome {
     cursor: pointer;
+}
+
+.ldHorizontalScrollContainer {
+    height : 400px;
+    /*padding for hiding scrollbar*/
+    padding: 10px;
+    width: 60%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: 20%;
+    margin-right: 20%;
+    position: relative;
+}
+
+.ldHorizontalScrollViewContainer {
+    width: 90%;
+    height: 427px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.ldHorizontalScrollObject {
+   height: 300px;
+   width: 500px;
+   font-size: 20px;
+   display: inline-block;
+   vertical-align: top;
+   cursor: pointer;
+}
+
+#leftScroll {
+    width: 5%;
+    position: absolute;
+    left: 0px;
+    top: 40%;
+
+    cursor: pointer;
+}
+
+#rightScroll {
+     width: 5%;
+     position: absolute;
+     right: 0px;
+     top: 40%;
+
+     cursor: pointer;
+}
+
+.homeInstagramPicture {
+    max-height: 250px;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.homeInstagramPictureMobile {
+    height: 325px;
+    width: 244px;
+}
+
+.homeInstagramText {
+    width: 400px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    cursor: default;
+    /*white-space: pre-wrap;*/
+}
+
+.instagramPostCenter {
+   
+}
+
+.instagramFrame {
+    height: 500px;
+    width: auto;
+    border: none;   
 }
 
 /* VIDEOS PAGE STYLING */
